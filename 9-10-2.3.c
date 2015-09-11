@@ -2,9 +2,9 @@
 
 main()
 {
- float a ;
+ float a                     ;
 
  printf("Entrez un réel : ") ;
- scanf("%f",&a) ;
- printf("%f\n",a) ;
+ scanf("%f", &a)             ;
+ printf("%f\n", a)           ;
 }

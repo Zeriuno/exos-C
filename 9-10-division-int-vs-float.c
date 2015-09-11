@@ -20,3 +20,6 @@ main()
   k = x / y ;
   printf("Division de réels avec résultat entier : ")
 }
+/*
+Ça ne marche pas, à corriger
+*/

@@ -8,3 +8,4 @@ si (p-déc < 0.5)
   alors
   arrondi = p-ent
 finsi
+#pseudo-code de M. Léry, tous droits réservés

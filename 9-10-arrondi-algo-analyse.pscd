@@ -27,3 +27,5 @@ x ← 2.53
 p-ent ← partie-entière(x)
 p-déc ← x - p-ent
 arrondi ← p-ent(x+0.5)
+
+#pseudo-code de M. Léry, tous droits réservés

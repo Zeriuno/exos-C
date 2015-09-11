@@ -4,8 +4,8 @@ main()
  int   pent, arrondi  ;
  float x              ;
 
- x = 2.53             ;
- pent = x             ;
+ x     = 2.53         ;
+ pent  = x            ;
  pdeci = x - pent     ;
 
  if (pdeci >= 0.5)
@@ -13,3 +13,4 @@ main()
  else
    arrondi = pent     ;
 }
+/*code de M. Léry, tous droits réservés/*

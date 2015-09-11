@@ -7,7 +7,7 @@ main()
 
   printf("Entrez un réel : ") ;
   scanf("%f",&x)              ;
-  
+
   p_ent   = x         ;
   p_deci  = x - p_ent ;
   arrondi = x + 0.5   ;
@@ -17,3 +17,6 @@ main()
   printf("L'arrondi est          : %d\n", arrondi) ;
 
 }
+/*
+code de M. Léry, tous droits réservés
+/*
