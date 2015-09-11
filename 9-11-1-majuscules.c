@@ -1,4 +1,6 @@
 /*
+À ajouter: contrôle si la lettre saisie est une majuscule.
+
 De M. Léry
 
 #Problème:
