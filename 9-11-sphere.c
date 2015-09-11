@@ -1,9 +1,10 @@
 #include <stdio.h>
+#define PI 3.1415 /*ajout de M. Léry */
 main()
 {
-float rayon, surface_sphere, volume_sphere, PI ;
+float rayon, surface_sphere, volume_sphere, /* PI éliminée pour la déclarer dans l'en-tête */ ;
 
-PI = 3.1415 ;
+/*  PI = 3.1415 éliminée pour la déclarer dans l'en-tête ; */
 printf("Entrez le rayon de la sphère : ")     ;
 scanf("%f",&rayon)                            ;
 
