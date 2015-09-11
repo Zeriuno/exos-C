@@ -1,0 +1,29 @@
+2.0 -> 2
+2.1 -> 2
+2.2 -> 2
+2.3 -> 2
+2.4 -> 2
+2.5 -> 3
+2.6 -> 3
+2.7 -> 3
+2.8 -> 3
+2.9 -> 3
+
+
+2.0 -(+0.5)-> 2.5 - troncation -> 2
+2.1 -(+0.5)-> 2.6 - troncation -> 2
+2.2 -(+0.5)-> 2.7 - troncation -> 2
+2.3 -(+0.5)-> 2.8 - troncation -> 2
+2.4 -(+0.5)-> 2.9 - troncation -> 2
+2.5 -(+0.5)-> 3.0 - troncation -> 3
+2.6 -(+0.5)-> 3.1 - troncation -> 3
+2.7 -(+0.5)-> 3.2 - troncation -> 3
+2.8 -(+0.5)-> 3.3 - troncation -> 3
+2.9 -(+0.5)-> 3.4 - troncation -> 3
+
+Un arrondi est la partie entière d'un réel auquel on ajoute 0.5.
+
+x ← 2.53
+p-ent ← partie-entière(x)
+p-déc ← x - p-ent
+arrondi ← p-ent(x+0.5)

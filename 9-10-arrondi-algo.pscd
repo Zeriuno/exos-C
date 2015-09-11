@@ -1,0 +1,10 @@
+x ← 2.53
+p-ent ← partie-entière(x)
+p-déc ← x - p-ent
+si (p-déc >= 0.5)
+  alors
+  arrondi = p-ent + 1
+si (p-déc < 0.5)
+  alors
+  arrondi = p-ent
+finsi
