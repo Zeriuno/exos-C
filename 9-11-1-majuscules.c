@@ -1,5 +1,7 @@
 /*
-À ajouter: contrôle si la lettre saisie est une majuscule.
+Tests à ajouter
+  * la lettre saisie est-elle une majuscule?
+  * est-ce
 
 De M. Léry
 
