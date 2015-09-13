@@ -67,7 +67,7 @@ main()
 /* récupération du numéro d'ordre */
   Num_Ordre=((Num_Sec[10]-48)*100) + ((Num_Sec[11]-48)*10) + (Num_Sec[12]-48) ;
 /* Affichage des résultats */
-  printf("Bonjour 		%s\n",Libelle)                 ;
+  printf("Bonjour 		  %s\n",Libelle)                 ;
   if (Sexe == 1)
 	 printf("Vous êtes né en		: %d\n",Annee)         ;
   else
@@ -77,10 +77,10 @@ main()
    else
 	 printf("Au mois de 		: %s\n",Nom_Mois)          ;
   if (Departement != 99)
-   printf("Dans le département	: %d\n",Departement) ;
-   printf("Dans la commune		: %d\n",Commune)       ;
+   printf("Dans le département	: %d\n"
+   "Dans la commune		: %d\n",Departement,Commune)   ;
   else
-    printf("À l'étranger\n")                         ;
-    printf("Dans la nation    : %d\n",Commune)       ;
+    printf("			  À l'étranger\n"
+    "Dans la nation		: %d\n",Commune)               ;
   printf("Avec le numéro d'ordre	: %d\n",Num_Ordre) ;
 }
