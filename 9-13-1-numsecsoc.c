@@ -1,4 +1,5 @@
-/* numsecsoc.c	*/
+/* numsecsoc.c
+Code de M. Léry */
 #include <stdio.h> /* --- #Inclusion des dépendances? stdio = standard I/O? --- */
 #include <string.h>  /* --- #Librairie pour gérer les chaînes? --- */
 #include <stdlib.h> /* --- Standard library? --- */
@@ -68,19 +69,19 @@ main()
   Num_Ordre=((Num_Sec[10]-48)*100) + ((Num_Sec[11]-48)*10) + (Num_Sec[12]-48) ;
 /* Affichage des résultats */
   printf("Bonjour 		  %s\n",Libelle)                 ;
-  if (Sexe == 1)
+  if (Sexe == 1) /* code mien */
 	 printf("Vous êtes né en		: %d\n",Annee)         ;
   else
-	 printf("Vous êtes née en	: %d\n",Annee)           ;
-  if (Mois == 8)
-	 printf("Au mois d' 		: %s\n",Nom_Mois)          ;
+	 printf("Vous êtes née en	: %d\n",Annee)           ;  /* code mien */
+  if (Mois == 8)  /* code mien */
+	 printf("Au mois d' 		: %s\n",Nom_Mois)          ;  /* code mien */
    else
 	 printf("Au mois de 		: %s\n",Nom_Mois)          ;
-  if (Departement != 99)
+  if (Departement != 99)  /* code mien */
    printf("Dans le département	: %d\n"
    "Dans la commune		: %d\n",Departement,Commune)   ;
   else
-    printf("			  À l'étranger\n"
-    "Dans la nation		: %d\n",Commune)               ;
+    printf("			  À l'étranger\n"  /* code mien */
+    "Dans la nation		: %d\n",Commune)               ; /* code mien */
   printf("Avec le numéro d'ordre	: %d\n",Num_Ordre) ;
 }
