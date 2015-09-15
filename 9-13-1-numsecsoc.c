@@ -10,14 +10,14 @@ main()
 /* --- instructions --- */
 /* saisie du numéro sous la forme d'une chaîne */
   printf("Entrez votre numéro de sécurité sociale : ") ;
-  scanf("%s",Num_Sec)         ;
+  scanf("%s", Num_Sec)         ;
 /* récupéeration du numéro 1 ou 2 du Sexe */
-  Sexe = Num_Sec[0]-48        ;
+  Sexe = Num_Sec[0]-48         ;
 /* Affectation du libellé */
   if (Sexe == 1)
-	 strcpy(Libelle,"Monsieur") ;
+	 strcpy(Libelle, "Monsieur") ;
   else
-	 strcpy(Libelle,"Madame")   ;
+	 strcpy(Libelle, "Madame")   ;
 /* récupération de l'année de naissance */
   Annee = ((Num_Sec[1]-48)*10) + (Num_Sec[2]-48) ;
   Annee = Annee + 1900                           ;
