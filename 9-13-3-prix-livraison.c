@@ -4,7 +4,7 @@
 #define prix_livraison=10
 main()
 {
-  float prix_article, prix_paye;
+  float prix_article, prix_paye ;
 
   printf("Saisir le prix en euros de l'article acheté : ") ;
   scanf("%f", &prix_article);
