@@ -36,7 +36,11 @@ main()
   nom[i+1] = '\0'                                ;
   i = 0                                          ;
   printf("Écris son adresse mél : ")             ;
-  scanf("%s", mel)                               ;
+  while((c=getchar()) != '\0')
+  {
+    mel[i] = c                                   ;
+  }
+  mel[i+1] = '\0'                                ;
   printf("Écris son numéro de téléphone (je mets le +, tu mets le code pays, et pas d'espaces) : ") ;
   scanf("%s", tel)                               ;
   strcat(fichier,nom)                            ;
