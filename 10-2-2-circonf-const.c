@@ -9,5 +9,5 @@ main()
   {
     circonf = 2 * rayon * PI                 ;
   }
-  printf("La circonference est %f", circonf) ;
+  printf("La circonference est %f\n", circonf) ;
 }
