@@ -3,6 +3,7 @@
 /*-----------------------*/
 
 /* la majuscule saisie est convertie en minuscule */
+/* cela peut également être fait par la fonction tolower(), qui nécessite par contre de ctype.h */
 
 #include <stdio.h>
 main()
