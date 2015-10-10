@@ -2,9 +2,8 @@
 #include <string.h>
 main()
 {
-  char prenom[100], nom[100], mel[100], fichier[204] ;
-  int tel                                            ;
-  FILE *vcard                                        ;
+  char prenom[100], nom[100], mel[100], fichier[204], tel[20] ;
+  FILE *vcard                                                 ;
 
   printf("              ****************\n") ;
   printf("              ** ATTENTION! **\n") ;
@@ -27,12 +26,12 @@ main()
   printf("Écris son adresse mél : ")             ;
   scanf("%s", mel)                               ;
   printf("Écris son numéro de téléphone (je mets le +, tu mets le code pays, et pas d'espaces) : ") ;
-  scanf("%d", &tel)                              ;
+  scanf("%s", tel)                               ;
   strcat(fichier,nom)                            ;
   strcat(fichier,prenom)                         ;
   strcat(fichier,".vcf")                         ;
   vcard = fopen(fichier, "w")                    ;
-  fprintf(vcard, "BEGIN:VCARD\nVERSION:3.0\nN:%s;%s;;;\nFN:%s %s\nORG:\nROLE:\nEMAIL;type=INTERNET:%s\nTEL;type=VOICE:+%d\nNOTE:\nEND:VCARD", nom, prenom, prenom, nom, mel, tel) ;
+  fprintf(vcard, "BEGIN:VCARD\nVERSION:3.0\nN:%s;%s;;;\nFN:%s %s\nORG:\nROLE:\nEMAIL;type=INTERNET:%s\nTEL;type=VOICE:+%s\nNOTE:\nEND:VCARD", nom, prenom, prenom, nom, mel, tel) ;
   fclose(vcard)  ;
   printf("Le fichier %s a bien été créé\n", fichier) ;
 }
