@@ -19,13 +19,13 @@ main()
     chiffre = quotient          ;
     if ((reste >= 0) && (reste <= 9))
     {
-      printf("%d\n", reste)     ;
+/*      printf("%d\n", reste)     ; Inséré pendant la construction du programme, c'est désormais inutile*/
       lettre = reste + 48       ;
     }
     else
     {
       lettre = reste + 55       ;
-      printf("%c\n", lettre)    ;
+/*      printf("%c\n", lettre)    ; Inséré pendant la construction du programme, c'est désormais inutile*/
     }
     chlettre[0] = lettre        ;
     chlettre[1] = '\0'          ;
