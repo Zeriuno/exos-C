@@ -1,3 +1,6 @@
+/*-------------------------------------------------------------
+-  le switch prédisposé ne fonctionne pas du tout: à réparer --
+-------------------------------------------------------------*/
 #include <stdio.h>
 main()
 {
@@ -9,7 +12,7 @@ scanf("%d", &ascii) ;
 if(!ascii)
   {
   scanf("%c", &poubelle) ;
-  while(poubelle(getchar()) != '\n') ;
+  while((poubelle=getchar()) != '\n') ;
   scanf("%c", &lettre)   ;
   printf("%d\n", lettre) ;
   }
