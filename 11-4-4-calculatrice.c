@@ -36,6 +36,7 @@ main()
       while(car != '\n')
       {
         scanf("%c", &car)                                       ;
+        while((poubelle=getchar()) != '\n') ;
         switch(car)
         {
           case '+' :
