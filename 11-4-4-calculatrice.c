@@ -56,10 +56,16 @@ main()
                 break                                                ;
               case '*' :
               case 'x' :
-                somme = somme * nb                                   ;
+                if (signe != car)
+                {
+                  somme = somme * nb                                 ;
+                }
                 break                                                ;
               case '/' :
-                somme = somme / nb                                   ;
+                if (signe != car)
+                {
+                  somme = somme / nb                                 ;
+                }
                 break                                                ;
             }
             signe = car                                              ;
