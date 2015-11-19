@@ -1,3 +1,10 @@
+*/----------------------------
+- Ajouter une selection      -
+- 1 pour ajouter une adresse -
+- mail, 2 pour un numéro tél -
+- etcetera, 0 pour quitter   -
+----------------------------*/
+
 #include <stdio.h>
 #include <string.h>
 main()
