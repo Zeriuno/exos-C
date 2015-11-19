@@ -3,6 +3,11 @@
 - 1 pour ajouter une adresse -
 - mail, 2 pour un numéro tél -
 - etcetera, 0 pour quitter   -
+- a terme un programme de    -
+- ligne de commande avec     -
+- deux modes: interactif et  -
+- avec arguments (search     -
+- et add)                    -
 ----------------------------*/
 
 #include <stdio.h>
