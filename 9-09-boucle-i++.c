@@ -9,8 +9,3 @@ main()
   }
 
 }
-/*
-Tentative non réussie
-De voir imprimer la valeur de i qui progresse.
-Tentative réussie le 2015-11-2.
-*/
