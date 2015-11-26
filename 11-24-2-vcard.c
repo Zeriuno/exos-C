@@ -14,6 +14,7 @@
 #include <stdio.h>
 #define MAX_PRENOM = 30
 #define MAX_NOM = 50
+#define MAX_MEL = 20
 main()
 {
 
@@ -26,8 +27,8 @@ main()
 
 
   */
-  int choix, champ_vcard   ;
-  char prenom[MAX_PRENOM], nom[MAX_NOM] ;
+  int choix, choix2, champ_vcard   ;
+  char prenom[MAX_PRENOM], nom[MAX_NOM], mel[MAX_MEL] ;
 
 
   /*
@@ -95,22 +96,31 @@ main()
           scanf("%s", nom)        ;
           break ;
         case 2 :
-          choix_tel = O           ;
+          choix2 = O           ;
           i = 0                   ;
-          while ((choix_tel == O) & (i < 2))
+          while ((choix2 == O) & (i < 2)) /*non, cela ne peut pas marcher. Il faut faire un tableau et mettre les numéros de téléphone là-dedans*/
           {
-            printf("Saisir le numéro de téléphone") ;
+            printf("Saisir le numéro de téléphone : ") ;
             scanf("%s", &numero_telephone1) ;
             printf("Voulez-vous saisir un deuxième numéro de téléphone? (O/N)") ;
-            scanf("%c", &choix_tel) ;
+            scanf("%c", &choix2) ;
 
-            if ((choix_tel == O) & (i == 2))
+            if ((choix2 == O) & (i == 2))
             {
               printf("La fiche contact est prévue pour enregistrer deux numéros de téléphone maximum") ;
             } ;
           } ;
-
           break ;
+
+        case 3 :
+          choix2 = 0 ;
+          i = 0      ;
+          while ((choix2 == =) & (i < 2))
+          {
+            printf("Saisir l'adresse mél : ") ;
+            scanf("%s", mel) ;
+            printf("");
+          }
         case default :
           printf("La valeur saisie n'est pas valide, merci d'en saisir une autre.\n") ;
           break ;
