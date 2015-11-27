@@ -99,8 +99,14 @@ main()
           choix2 = O           ;
           i = 0                   ;
           while ((choix2 == O) & (i < 2))
-          /*non, cela ne peut pas marcher. Il faut faire un tableau et mettre les numéros de téléphone là-dedans
-          Il y a deux saisies de caractères à la suite, il faut vider le buffer de \n*/
+          /*
+          BUG:
+          Non, cela ne peut pas marcher. Il faut faire un tableau et mettre les numéros de téléphone là-dedans.
+          Il y a deux saisies de caractères à la suite, il faut vider le buffer de \n
+
+          FEATURE:
+          La valeur de test de i est plutôt à remplacer avec une constante qui sera définie dans l'en-tête du programme
+          */
           {
             printf("Saisir le numéro de téléphone : ") ;
             scanf("%s", &numero_telephone1) ;
