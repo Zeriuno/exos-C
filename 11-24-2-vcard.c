@@ -106,8 +106,9 @@ main()
             scanf("%s", &numero_telephone1) ;
             printf("Voulez-vous saisir un autre numéro de téléphone? (O/N)") ;
             scanf("%c", &choix2) ;
-
+            /*utile de faire un toupper ici*/
             if ((choix2 == O) & (i == 2))
+            /*dans le if, la valeur de test de i est plutôt à remplacer avec une constante qui sera définie dans l'en-tête du programme*/
             {
               printf("La fiche contact est prévue pour enregistrer deux numéros de téléphone maximum") ;
             } ;
