@@ -102,7 +102,7 @@ main()
           {
             printf("Saisir le numéro de téléphone : ") ;
             scanf("%s", &numero_telephone1) ;
-            printf("Voulez-vous saisir un deuxième numéro de téléphone? (O/N)") ;
+            printf("Voulez-vous saisir un autre numéro de téléphone? (O/N)") ;
             scanf("%c", &choix2) ;
 
             if ((choix2 == O) & (i == 2))
