@@ -84,7 +84,7 @@ main()
         scanf("%d", &champ_vcard
 
         while (getchar!=\n)
-        
+        {
         switch champ_vcard
         {
         case 0 :
@@ -117,24 +117,28 @@ main()
             if ((choix2 == O) & (i == 2))
             /*dans le if, la valeur de test de i est plutôt à remplacer avec une constante qui sera définie dans l'en-tête du programme*/
             {
-              printf("La fiche contact est prévue pour enregistrer deux numéros de téléphone maximum") ;
+              printf("Vous avez déjà atteint la limite des numéros de téléphone prévus par la fiche contact.") ;
             } ;
           } ;
           break ;
 
         case 3 :
-          choix2 = 0 ;
+        /* Idem comme pour le case 2, tout */
+          choix2 = O ;
           i = 0      ;
-          while ((choix2 == =) & (i < 2))
+          while ((choix2 == O) & (i < 2))
           {
             printf("Saisir l'adresse mél : ") ;
-            scanf("%s", mel) ;
-            printf("");
+            scanf("%s", mel)             ;
+            printf("Voulez-vous saisir un autre numéro de téléphone? (O/N)") ;
+            scanf("%c", &choix2)         ;
+            if ((choix2 == O) & (i ));
           }
         case default :
           printf("La valeur saisie n'est pas valide, merci d'en saisir une autre.\n") ;
           break ;
         }
+      }
       }
     }
     else
