@@ -84,7 +84,8 @@ main()
         scanf("%d", &champ_vcard
 
         while (getchar!=\n)
-        switch vcard
+        
+        switch champ_vcard
         {
         case 0 :
           printf("\n\n\n--- Sortie de la modalité d'édition ---\n\n\n") ;
