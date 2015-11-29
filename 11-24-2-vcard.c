@@ -132,7 +132,11 @@ main()
             scanf("%s", mel)             ;
             printf("Voulez-vous saisir un autre numéro de téléphone? (O/N)") ;
             scanf("%c", &choix2)         ;
-            if ((choix2 == O) & (i ));
+            if ((choix2 == O) & (i ))
+            {
+              printf("La limite des adresses mél prévues a été atteinte.") ;
+
+            }
           }
         case default :
           printf("La valeur saisie n'est pas valide, merci d'en saisir une autre.\n") ;
