@@ -117,7 +117,7 @@ main()
             if ((choix2 == O) & (i == 2))
             /*dans le if, la valeur de test de i est plutôt à remplacer avec une constante qui sera définie dans l'en-tête du programme*/
             {
-              printf("Vous avez déjà atteint la limite des numéros de téléphone prévus par la fiche contact.") ;
+              printf("La limite des numéros de téléphone prévus a été atteinte.") ;
             } ;
           } ;
           break ;
