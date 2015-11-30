@@ -140,7 +140,21 @@ main()
               printf("La limite des adresses mél prévues a été atteinte.") ;
 
             }
+          } ;
+          break ;
+        case 4 :
+        /* Idem comme pour le case 2, tout */
+          choix2 = O ;
+          i = 0 ;
+          while ((choix2 == O) & (i < 2))
+          {
+            printf("Comme je ne sais pas traiter les espaces rentre simplement quelque chose à éditer par la suite.\nSaisir l'adresse : ") ;
+            scanf("%s", adresse) ;
+            printf("Voulez-vous saisir une autre adresse ? (O/N)") ;
+            scanf("%c", &choix2) ;
+            if
           }
+          break ;
         case default :
           printf("La valeur saisie n'est pas valide, merci d'en saisir une autre.\n") ;
           break ;
