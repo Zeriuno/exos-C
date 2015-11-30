@@ -103,7 +103,10 @@ main()
           /*
           BUG:
           Non, cela ne peut pas marcher. Il faut faire un tableau et mettre les numéros de téléphone là-dedans.
+
           Il y a deux saisies de caractères à la suite, il faut vider le buffer de \n
+
+          Et si l'utilisateur rentre 'f' comme 'choix2', on sort de la boucle. Il faut un test pour que les seules valeurs acceptées soient O et N.
 
           FEATURE:
           La valeur de test de i est plutôt à remplacer avec une constante qui sera définie dans l'en-tête du programme
