@@ -9,7 +9,7 @@ main()
 {
   int a, b, c, grand, /**/ egalite_test;
   /*booléen pour savoir si il y a des égalités entre les nombres*/
-  char grand_mot[9], egalite_mot[40] ;
+/*  char grand_mot[9], egalite_mot[40] ;*/
 
   egalite_test = 0                               ;
   printf("Il faut saisir trois entiers.\n") ;
@@ -25,17 +25,17 @@ main()
     if(a > c)
     {
       grand = a             ;
-      grand_mot = "premier" ;
+/*      grand_mot = "premier" ;*/
     }
     else
     {
       grand = c               ;
-      grand_mot = "troisième" ;
-      if((a - c) == 0)
+/*      grand_mot = "troisième" ;*/
+/*      if((a - c) == 0)
       {
         egalite_test = 1  ;
         egalite_mot = "le premier et le troisième" ;
-      }
+      }*/
     }
   }
   else
@@ -43,11 +43,12 @@ main()
     if(b > c)
     {
       grand = b              ;
-      grand_mot = "deuxième" ;
+/*      grand_mot = "deuxième" ;*/
     }
     else
     {
       grand = c ;
+/*    grand_mot = "troisième" ;
       if((b - c) == 0)
       {
         egalite_test = 1  ;
@@ -59,12 +60,13 @@ main()
         {
           egalite_mot = "le premier, le deuxième et le troisième!" ;
         }
-      }
+      }*/
     }
   }
-  printf("Le plus grand des trois nombres est le %c : %d\n", grand_mot, grand) ;
-  if(egalite_test == 1)
+  printf("%d\n", grand) ;
+/*  printf("Le plus grand des trois nombres est le %c : %d\n", grand_mot, grand) ;*/
+/*  if(egalite_test == 1)
   {
     printf("Et tu as saisi des nombres égaux: %c. Petit malin!", egalite_mot) ;
-  }
+  }*/
 }
