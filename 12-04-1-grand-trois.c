@@ -64,10 +64,9 @@ main()
       }
     }
   }
-  printf("%d\n", grand) ;
   printf("Le plus grand des trois nombres est le %s : %d\n", grand_mot, grand) ;
   if(egalite_test == 1)
   {
-    printf("Et tu as saisi des nombres égaux: %s. Petit malin!", egalite_mot) ;
+    printf("Et tu as saisi des nombres égaux: %s. Petit malin!\n", egalite_mot) ;
   }
 }
