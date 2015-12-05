@@ -21,6 +21,11 @@ main()
   printf("3ème : ")                         ;
   scanf("%d", &c)                           ;
 
+  if((a - b - c) == -a)
+  {
+    printf("Petit malin, ils sont tous égaux!") ;
+  }
+
   if(a > b)
   {
     if(a > c)
@@ -50,14 +55,14 @@ main()
     {
       grand = c                      ;
       strcpy(grand_mot, "troisième") ;
-      if((b - c) == 0)
+      if(b == c)
       {
         egalite_test = 1  ;
         strcpy(egalite_mot, "le deuxième et le troisième") ;
       }
       if(egalite_test == 1)
       {
-        if((a - c) == 0)
+        if(a == c)
         {
           strcpy(egalite_mot, "le premier, le deuxième et le troisième!") ;
         }
