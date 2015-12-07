@@ -3,14 +3,21 @@
 #include <stdio.h>
 main()
 {
-  int nombre, cpt, F ;
+  int nb, cpt, F ;
 
   printf("Saisir un nombre entier, je calculerai la factorielle : ") ;
-  scanf("%d", nombre) ;
+  scanf("%d", &nb) ;
+  printf("%d\n", nb) ;
+  F = 1 ;
 
-  for (cpt = 1 ; cpt == nombre ; cpt++)
+  if(nb !=0)
   {
-    F = F * cpt ;
-  }
-  printf("%d! = %d", nombre, F) ;
+    for(cpt = 2 ; cpt < nb+1 ; cpt++)
+    {
+      printf("%d * %d\n", F, cpt) ;
+      F = (F * cpt)            ;
+     }
+   }
+
+  printf("%d! = %d\n", nb, F) ;
 }
