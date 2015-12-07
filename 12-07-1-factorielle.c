@@ -14,7 +14,6 @@ main()
   {
     for(cpt = 2 ; cpt < nb+1 ; cpt++)
     {
-      printf("%d * %d\n", F, cpt) ;
       F = (F * cpt)            ;
      }
    }
