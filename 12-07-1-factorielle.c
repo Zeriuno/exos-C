@@ -7,7 +7,6 @@ main()
 
   printf("Saisir un nombre entier, je calculerai la factorielle : ") ;
   scanf("%d", &nb) ;
-  printf("%d\n", nb) ;
   F = 1 ;
 
   if(nb < 0)
