@@ -10,13 +10,19 @@ main()
   printf("%d\n", nb) ;
   F = 1 ;
 
-  if(nb !=0)
+  if(nb < 0)
   {
-    for(cpt = 2 ; cpt < nb+1 ; cpt++)
+    printf("Nous on veut faire uniquement les factorielles de nombres positifs!\n") ;
+  }
+  else
+  {
+    if(nb > 0)
     {
-      F = (F * cpt)            ;
-     }
-   }
-
-  printf("%d! = %d\n", nb, F) ;
+      for(cpt = 2 ; cpt < nb+1 ; cpt++)
+      {
+        F = (F * cpt)            ;
+       }
+    }
+    printf("%d! = %d\n", nb, F) ;
+  }
 }
