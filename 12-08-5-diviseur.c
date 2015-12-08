@@ -24,7 +24,8 @@ main()
   {
     trouve = 1                                                ;
   }
-  for(diviseur = 3 ; diviseur < limite ; diviseur += 2)
+  diviseur = 3 /*première condition de la feu boucle for*/    ;
+  while(diviseur < limite) /*on garde la condition centrale de la boucle for*/
   {
     reste = N % diviseur                                      ;
     if(reste == 0)
@@ -32,6 +33,8 @@ main()
       trouve = 1                                              ;
       diviseur1 = diviseur                                    ;
     }
+    diviseur += 2                                             ;
+    /*pas de la boucle for*/
   }
   if(trouve)
   {
