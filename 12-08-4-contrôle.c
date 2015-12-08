@@ -18,7 +18,6 @@ main()
     i += 2                             ;
     somme += i                         ;
     j++                                ; /*erreur, j'ai écrit j = j++ ;*/
-    printf("i %d -- somme %d -- j %d\n", i, somme, j) ;
   };
 
   printf("la somme est : %d\n", somme) ;/*erreur: j'ai oublié '\n'*/
