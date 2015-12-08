@@ -18,7 +18,7 @@ main()
   scanf("%d", &N) ;
   trouve = 0 ;
   reste = N % 2 ;
-  if(reste == 0)
+  if(reste == 0) /*cela rend 2 nombre non premier, erreur*/
   {
     trouve = 1;
   }
