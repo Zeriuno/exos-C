@@ -18,7 +18,7 @@ main()
   scanf("%d", &N) ;
   trouve = 0 ;
   reste = N % 2 ;
-  if(reste == 0) /*cela rend 2 nombre non premier, erreur*/
+  if((reste == 0) && (N != 2)) /*exclusion de 2, qui est divisible par 2, mais est premier*/
   {
     trouve = 1;
   }
