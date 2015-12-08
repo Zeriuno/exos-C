@@ -25,7 +25,7 @@ main()
     trouve = 1                                                ;
   }
   diviseur = 3 /*première condition de la feu boucle for*/    ;
-  while(diviseur < limite) /*on garde la condition centrale de la boucle for*/
+  while((diviseur < limite) /*on garde la condition centrale de la boucle for*/ && (trouve == 0))
   {
     reste = N % diviseur                                      ;
     if(reste == 0)
