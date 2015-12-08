@@ -2,10 +2,11 @@
 #include <ctype.h>
 main()
 {
-  int a  ;
-  a = 'a';
+  int a                                ;
+  printf("Saisir un nombre entier : ") ;
+  scanf("%d", &a)                      ;
   if(isdigit(a))
-    printf("VRAI") ;
+    printf("VRAI\n")                   ;
   else
-    printf("FAUX") ;
+    printf("Con.\n")                   ;
 }
