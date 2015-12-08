@@ -14,6 +14,7 @@ main()
   somme = 0                            ;
   j = 0                                ;
   while(j < impairs)/*erreur: j'ai mis '<='*/
+  /*deux versions possibles avec la boucle 'for', dont test avec '<(impair * 2)'*/
   {
     i += 2                             ;
     somme += i                         ;
