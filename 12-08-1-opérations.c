@@ -9,13 +9,21 @@ main()
   scanf("%d", &n2)      ;
   if(n2=0)
   printf("Je vais faire les quatre opérations avec ces deux nombres...") ;
+
+  /*
+  suite de affectation et affichage afin de rendre plus compact le traitement de l'exception n2=0
+  */
+  
   add = n1 + n2           ;
-  sous = n1 -n2           ;
-  mult = n1 * n2          ;
-  div = n1 / n2           ;
-  rest = n1 % n2          ;
   printf("%d + %d = %d", n1, n2, add)  ;
+  sous = n1 -n2           ;
   printf("%d - %d = %d", n1, n2, sous) ;
+  mult = n1 * n2          ;
   printf("%d * %d = %d", n1, n2, mult) ;
-  printf("%d / %d = %d avec reste %d", n1, n2, div, rest) ;
+  if(n2 != 0)
+  {
+    div = n1 / n2           ;
+    rest = n1 % n2          ;
+    printf("%d / %d = %d avec reste %d", n1, n2, div, rest) ;
+  }
 }
