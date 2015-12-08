@@ -14,10 +14,15 @@ jeu de test:
 main()
 {
   int N, diviseur, trouve, reste ;
-  printf("Entrer 1 nombre") ;
+  printf("Entrer 1 nombre : ") ;
   scanf("%d", &N) ;
   trouve = 0 ;
-  for(diviseur = 2 ; diviseur < N ; diviseur++)
+  reste = N % 2 ;
+  if(reste == 0)
+  {
+    trouve = 1;
+  }
+  for(diviseur = 3 ; diviseur < N ; diviseur += 2)
   {
     reste = N % diviseur ;
     if(reste == 0)
