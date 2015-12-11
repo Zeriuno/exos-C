@@ -53,5 +53,6 @@ main()
     somme = somme + tabnotes[i]            ;
   }
   moyenne = somme / nbnotes                ;
-  printf("La moyenne des %d notes est %f\n", nbnotes, moyenne) ;
+  printf("Notes : %d", nbnotes)              ;
+  printf("Moyenne : %f\n", moyenne) ;
 }
