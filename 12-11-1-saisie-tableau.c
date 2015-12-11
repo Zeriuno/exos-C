@@ -34,7 +34,7 @@ main()
   /*
   nbnotes servira pour afficher mais aussi pour se remettre à saisir
   */
-    nbnotes = i - 1                        ;
+  nbnotes = i - 1                          ;
   /*affichage*/
   printf("Voici les notes saisies :\n")    ;
   for (i=0; i < nbnotes ; i++)
