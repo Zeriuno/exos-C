@@ -5,12 +5,16 @@ Saisie de notes dans un tableau, '-1' arrête la saisie*/
 #define MAX_NOTES 20
 void saisie()             ;
 void affichage()          ;
+float moyenne_calcul()    ;
 float tabnotes[MAX_NOTES] ;
 int nbnotes               ;
 main()
 {
+  float moyenne_main                       ;
   saisie()                                 ;
-  affichage() ;
+  affichage()                              ;
+  moyenne_main = moyenne_calcul()          ;
+  printf("Moyenne : %f\n", moyenne_main)   ;
 }
 
 
@@ -26,8 +30,8 @@ main()
 
 void saisie()
 {
-  float x, tabnotes[MAX_NOTES]             ;
-  int i, nbnotes                           ;
+  float x                                  ;
+  int i                                    ;
   i = 0                                    ;
   printf("Entrez une liste de notes et terminez par -1 : ")   ;
   x = 1                                    ;
@@ -52,8 +56,7 @@ void saisie()
 
 void affichage()
 {
-  int i, nbnotes                           ;
-  float tabnotes[MAX_NOTES]                ;
+  int i                                    ;
   printf("Voici les notes saisies :\n")    ;
   for (i=0; i < nbnotes ; i++)
   {
@@ -71,18 +74,32 @@ void affichage()
 --                                        --
 --                                        --
 --                                        --
--------------------------------------------
+-------------------------------------------*/
 
-moyenne_calcul()
+float moyenne_calcul()
 {
-  /*calcul de la moyenne
+  int i                                    ;
+  float somme, moyenne                     ;
   somme = 0                                ;
+  printf("nbnotes %d\n", nbnotes) ;
   for(i = 0 ; i < nbnotes ; i++)
   {
+    printf("i = %d tabnotes = %f\n", i, tabnotes[i]) ;
     somme = somme + tabnotes[i]            ;
   }
   moyenne = somme / nbnotes                ;
+  printf("somme = %f\n", somme) ;
   printf("Notes : %d\n", nbnotes)          ;
-  printf("Moyenne : %f\n", moyenne)        ;
+  printf("moyenne fonc = %f\n", moyenne) ;
+  return moyenne                           ;
 }
-*/
+
+/*------------------------------------------
+--                                        --
+--             Procédure                  --
+--             min/max                    --
+--                                        --
+--                                        --
+--                                        --
+--                                        --
+-------------------------------------------*/
