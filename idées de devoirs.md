@@ -7,3 +7,15 @@ Exercices possibles
 
  * tester quel de deux chiffres est le plus grand (if statements)
  * prix livraison (algorithmique)
+ * tester si le logiciel de calcul de la sphère, surface avec math.h est différent que le même sans math.h
+
+
+
+ fact(n)
+ si (n=1) alors
+   retourner(1)
+ sinon
+   retourner n*fact(n)
+   -------------------
+       0! = 1.
+       Pour tout entier n > 0, n! = (n – 1)! × n.
