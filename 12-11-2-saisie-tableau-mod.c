@@ -24,7 +24,7 @@ main()
 --                                        --
 -------------------------------------------*/
 
-saisie()
+void saisie()
 {
   float x, tabnotes[MAX_NOTES]             ;
   int i, nbnotes                           ;
@@ -50,7 +50,7 @@ saisie()
 --                                        --
 -------------------------------------------*/
 
-affichage()
+void affichage()
 {
   int i, nbnotes                           ;
   float tabnotes[MAX_NOTES]                ;
