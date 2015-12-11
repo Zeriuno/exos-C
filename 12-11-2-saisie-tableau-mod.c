@@ -3,6 +3,8 @@ Exercice fait par M. Léry, tous droits réservés
 Saisie de notes dans un tableau, '-1' arrête la saisie*/
 #include <stdio.h>
 #define MAX_NOTES 20
+saisie()                  ;
+affichage()               ;
 float tabnotes[MAX_NOTES] ;
 int nbnotes               ;
 main()
