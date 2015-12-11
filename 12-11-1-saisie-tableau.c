@@ -2,7 +2,7 @@
 Exercice fait par M. Léry, tous droits réservés
 Saisie de notes dans un tableau, '-1' arrête la saisie*/
 #include <stdio.h>
-#define MAX_NOTES 2
+#define MAX_NOTES 20
 main()
 {
   float tabnotes[MAX_NOTES], x, somme, moyenne      ;
