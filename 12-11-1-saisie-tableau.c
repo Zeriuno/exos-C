@@ -7,8 +7,8 @@ main()
 {
   float tabnotes[MAX_NOTES], x, somme, moyenne, notemin, notemax ;
   int i, nbnotes                           ;
-  /*La partie fichier est de moi
-  FILE *notes, *moyenne                    ;*/
+  /*La partie fichier est de moi*/
+  FILE *notes,                             ;
 
   i= 0                                     ;
   printf("Entrez une liste de notes et terminez par -1 : ")   ;
@@ -46,6 +46,9 @@ main()
   */
     printf("%6.2f", tabnotes[i])           ;
   }
+  /*
+  notes=fwrite("")
+  */
   printf("\n")                             ;
 
   /*calcul de la moyenne*/
