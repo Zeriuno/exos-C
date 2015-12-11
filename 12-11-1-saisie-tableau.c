@@ -55,6 +55,25 @@ main()
     somme = somme + tabnotes[i]            ;
   }
   moyenne = somme / nbnotes                ;
-  printf("Notes : %d\n", nbnotes)              ;
-  printf("Moyenne : %f\n", moyenne) ;
+  printf("Notes : %d\n", nbnotes)          ;
+  printf("Moyenne : %f\n", moyenne)        ;
+
+  /*trouver la plus petite note*/
+  notemin = 9999                           ;
+  /*nécessité d'initialiser avec une valeur qui sera nécessairement supérieure à toute note*/
+  notemax = -9999                          ;
+  /*nécessité spéculaire*/
+  for(i = 0; i < nbnotes; i++)
+  {
+    if(tabnotes[i] < notemin)
+    {
+      notemin = tabnotes[i]                   ;
+    }
+    if(tabnotes[i > notemax])
+    {
+      notemax = tabnotes[i]                   ;
+    }
+  }
+  printf("Note min. : %f", notemin)     ;
+  printf("Note max. : %f", notemax)     ;
 }
