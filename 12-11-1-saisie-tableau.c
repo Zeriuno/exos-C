@@ -5,7 +5,7 @@ Saisie de notes dans un tableau, '-1' arrête la saisie*/
 #define MAX_NOTES 2
 main()
 {
-  float tabnotes[MAX_NOTES], x                   ;
+  float tabnotes[MAX_NOTES], x, somme, moyenne      ;
   int i, nbnotes                           ;
 
   i= 0                                     ;
@@ -31,6 +31,9 @@ main()
     tabnotes[i++] = x                      ;
   }
 
+  /*
+  nbnotes servira pour afficher mais aussi pour se remettre à saisir
+  */
     nbnotes = i - 1                        ;
   /*affichage*/
   printf("Voici les notes saisies :\n")    ;
@@ -39,7 +42,16 @@ main()
   /*
     printf("%5.2f", tabnote[i])            ;
   */
-    printf("%6.2f", tabnotes[i])            ;
+    printf("%6.2f", tabnotes[i])           ;
   }
   printf("\n")                             ;
+
+  /*calcul de la moyenne*/
+  somme = 0                                ;
+  for(i = 0 ; i < nbnotes ; i++)
+  {
+    somme = somme + tabnotes[i]            ;
+  }
+  moyenne = somme / nbnotes                ;
+  printf("La moyenne des %d notes est %f\n", nbnotes, moyenne) ;
 }
