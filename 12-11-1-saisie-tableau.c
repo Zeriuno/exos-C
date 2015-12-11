@@ -5,8 +5,10 @@ Saisie de notes dans un tableau, '-1' arrête la saisie*/
 #define MAX_NOTES 20
 main()
 {
-  float tabnotes[MAX_NOTES], x, somme, moyenne      ;
+  float tabnotes[MAX_NOTES], x, somme, moyenne, notemin, notemax ;
   int i, nbnotes                           ;
+  /*La partie fichier est de moi
+  FILE *notes, *moyenne                    ;*/
 
   i= 0                                     ;
   printf("Entrez une liste de notes et terminez par -1 : ")   ;
