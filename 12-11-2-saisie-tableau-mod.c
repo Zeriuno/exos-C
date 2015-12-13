@@ -14,7 +14,8 @@ main()
   saisie()                                 ;
   affichage()                              ;
   moyenne_main = moyenne_calcul()          ;
-  printf("Moyenne : %f\n", moyenne_main)   ;
+  printf("Moyenne : %6.2f\n", moyenne_main);
+  min_max()                                ;
 }
 
 
@@ -57,10 +58,10 @@ void saisie()
 void affichage()
 {
   int i                                    ;
-  printf("Voici les notes saisies :\n")    ;
+  printf("Voici les notes saisies :\n\n")  ;
   for (i=0; i < nbnotes ; i++)
   {
-    printf("%6.2f", tabnotes[i])           ;
+    printf("%6.2f\n", tabnotes[i])         ;
   }
   printf("\n")                             ;
 }
