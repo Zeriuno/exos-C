@@ -4,9 +4,9 @@ Saisie de notes dans un tableau, '-1' arrête la saisie*/
 #include <stdio.h>
 #define MAX_NOTES 20
 void saisie()             ;
-void affichage()          ;
+void affichage(), min_max() ;
 float moyenne_calcul()    ;
-float tabnotes[MAX_NOTES] ;
+float min, max, tabnotes[MAX_NOTES] ;
 int nbnotes               ;
 main()
 {
@@ -79,18 +79,23 @@ void affichage()
 float moyenne_calcul()
 {
   int i                                    ;
-  float somme, moyenne                     ;
+  float moyenne, somme                     ;
   somme = 0                                ;
-  printf("nbnotes %d\n", nbnotes) ;
+  max = -9999                              ;
+  min = 9999                               ;
   for(i = 0 ; i < nbnotes ; i++)
   {
-    printf("i = %d tabnotes = %f\n", i, tabnotes[i]) ;
     somme = somme + tabnotes[i]            ;
+    if(tabnotes[i] < min)
+    {
+      min = tabnotes[i]                    ;
+    }
+    if(tabnotes[i] > max)
+    {
+      max = tabnotes[i]                    ;
+    }
   }
   moyenne = somme / nbnotes                ;
-  printf("somme = %f\n", somme) ;
-  printf("Notes : %d\n", nbnotes)          ;
-  printf("Moyenne : %f\n", moyenne) ;
   return moyenne                           ;
 }
 
@@ -98,8 +103,14 @@ float moyenne_calcul()
 --                                        --
 --             Procédure                  --
 --             min/max                    --
---                                        --
+--             par moi                    --
 --                                        --
 --                                        --
 --                                        --
 -------------------------------------------*/
+
+void min_max()
+{
+  printf("Note minimale : %6.2f\n", min)   ;
+  printf("Note maximale : %6.2f\n", max)   ;
+}
