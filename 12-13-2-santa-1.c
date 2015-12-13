@@ -1,8 +1,10 @@
+/**/
+
 #include <stdio.h>
 main()
 {
   FILE *a                                              ;
-  char b                                               ;
+  char b, file[20]                                     ;
   int floors, basement, i                              ;
 
   b = 'a'                                              ;
@@ -10,7 +12,9 @@ main()
   i = 0                                                ;
   basement = 0                                         ;
 
-  a = fopen("12-13-1-santa-1-instructions.txt", "r")   ;
+  printf("What's the name of the file to count the floors? ") ;
+  scanf("%s", file)                                    ;
+  a = fopen(file, "r")                                 ;
   while(b != '\n')
   {
     fscanf(a, "%c", &b)                                ;
