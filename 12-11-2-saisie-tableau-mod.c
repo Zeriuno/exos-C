@@ -3,11 +3,11 @@ Exercice fait par M. Léry, tous droits réservés
 Saisie de notes dans un tableau, '-1' arrête la saisie*/
 #include <stdio.h>
 #define MAX_NOTES 20
-void saisie()             ;
-void affichage(), min_max() ;
-float moyenne_calcul()    ;
-float min, max, tabnotes[MAX_NOTES] ;
-int nbnotes               ;
+void saisie()                              ;
+void affichage(), min_max()                ;
+float moyenne_calcul()                     ;
+float min, max, tabnotes[MAX_NOTES]        ;
+int nbnotes                                ;
 main()
 {
   float moyenne_main                       ;
@@ -69,7 +69,7 @@ void affichage()
 
 /*------------------------------------------
 --                                        --
---             Procédure                  --
+--             Fonction                   --
 --             moyenne                    --
 --                                        --
 --                                        --
