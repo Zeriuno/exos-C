@@ -2,13 +2,16 @@
 #include <stdio.h>
 
 char saisie_fichier() ;
-
+void affichage()      ;
 FILE *a               ;
 char file[20]         ;
+int floors, basement  ;
+
+
 
 main()
 {
-  int floors, basement, i                              ;
+  int i                                                ;
   char b                                               ;
 
   b = 'a'                                              ;
@@ -42,8 +45,8 @@ main()
       basement = i                                     ;
   }
   fclose(a)                                            ;
-  printf("Santa Claus is on floor n. %d\n", floors)    ;
-  printf("And he first entered the basement at position n.%d\n", basement) ;
+
+  affichage()                                          ;
 }
 
 
@@ -64,4 +67,23 @@ char saisie_fichier()
   printf("What's the name of the file to count the floors? ") ;
   scanf("%s", file)                                           ;
   return file[20]                                             ;
+}
+
+
+/*---------------------------------------------------------
+--                Affichage du résultat                  --
+--                                                       --
+--                                                       --
+--                                                       --
+--                                                       --
+--                                                       --
+--                                                       --
+--                                                       --
+---------------------------------------------------------*/
+
+
+void affichage()
+{
+  printf("Santa Claus is on floor n. %d\n", floors)    ;
+  printf("And he first entered the basement at position n.%d\n", basement) ;
 }
