@@ -90,7 +90,7 @@ float moyenne_calcul()
   moyenne = somme / nbnotes                ;
   printf("somme = %f\n", somme) ;
   printf("Notes : %d\n", nbnotes)          ;
-  printf("moyenne fonc = %f\n", moyenne) ;
+  printf("Moyenne : %f\n", moyenne) ;
   return moyenne                           ;
 }
 
