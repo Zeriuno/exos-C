@@ -218,9 +218,7 @@ void chargement()
   scanf("%s", nomfichier)                  ;
 
   a=fopen(nomfichier,"r")                  ;
-
-
-  i = nbnotes                              ;
+  i = 0                                    ; /*quand on charge, on charge dans le début du tableau, pas à la fin*/
   while(!=feof(a))
   {
     retour = fscanf(a, "%f", &x)           ;
