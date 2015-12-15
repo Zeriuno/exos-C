@@ -247,7 +247,7 @@ void chargement()
 
   a=fopen(nomfichier,"r")                  ;
   i = 0                                    ; /*quand on charge, on charge dans le début du tableau, pas à la fin*/
-  while(!=feof(a))
+  while(!feof(a))
   {
     retour = fscanf(a, "%f", &x)           ;
     if (retour != EOF)
