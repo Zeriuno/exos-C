@@ -229,4 +229,5 @@ void chargement()
   }
   fclose(a)                                ;
   nbnotes = i                              ;
+  printf("%d notes lues.\n", %nbnotes)     ;
 }
