@@ -4,6 +4,8 @@ Saisie de notes dans un tableau, '-1' arrête la saisie
 
 Jeu de tests
 19 20 10 10 0 1 15 -1
+
+à faire: lorsqu'on quitte, vérifier si une sauvegarde est nécessaire. On peut le faire en particulier avec une procédure. Et le test de sauvegarde une autre procédure.
 */
 #include <stdio.h>
 #define MAX_NOTES 20
@@ -210,13 +212,34 @@ void sauvegarde()
 void chargement()
 {
   nbnotes = i - 1                          ;
-  char nomfichier[200]                     ;
+  char nomfichier[200], reponse_sauvegarde ;
   float x                                  ;
   int i, retour                            ;
   FILE *a                                  ;
 
+  /*------------------------------------------
+  --                                        --
+  --             code à                     --
+  --             externaliser               --
+  --     procédure test sauvegarde          --
+  --                                        --
+  --                                        --
+  --                                        --
+  -------------------------------------------*/
 
-  printf("Saisir le nom du fichier à ouvrir: ") ;
+  if(a_sauvegarder)
+  {
+    printf("Les données ont été modifiées\n")          ;
+    printf("Voulez-vous faire une sauvegarde ? (o/n)") ;
+    scanf("%c", &reponse_sauvegarde)       ;
+    if(reponse_sauvegarde == 'o')
+    {
+      sauvegarde()                         ;
+    }
+
+  }
+
+  printf("Saisir le nom du fichier à ouvrir: ")        ;
   scanf("%s", nomfichier)                  ;
 
   a=fopen(nomfichier,"r")                  ;
