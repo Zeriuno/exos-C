@@ -5,7 +5,10 @@ Saisie de notes dans un tableau, '-1' arrête la saisie
 Jeu de tests
 19 20 10 10 0 1 15 -1
 
-à faire: lorsqu'on quitte, vérifier si une sauvegarde est nécessaire. On peut le faire en particulier avec une procédure. Et le test de sauvegarde une autre procédure.
+à faire:
+
+* lorsqu'on quitte, vérifier si une sauvegarde est nécessaire. On peut le faire en particulier avec une procédure. Et le test de sauvegarde une autre procédure.
+* proposer comme nom de sauvegarde et de chargement le dernier nom utilisé
 */
 #include <stdio.h>
 #define MAX_NOTES 20
