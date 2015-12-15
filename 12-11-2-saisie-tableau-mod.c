@@ -69,7 +69,7 @@ void saisie()
 {
   float x                                  ;
   int i                                    ;
-  i = 0                                    ;
+  i = nbnotes                              ;
   printf("Entrez une liste de notes et terminez par -1 : ")   ;
   x = 1                                    ;
   while(x >=0)
