@@ -10,6 +10,7 @@ Jeu de tests
 void saisie()                                     ;
 void affichage(), min_max()                       ;
 void sauvegarde()                                 ;
+void chargement()                                 ;
 float moyenne_calcul()                            ;
 float min, max, tabnotes[MAX_NOTES]               ;
 int nbnotes = 0                                   ;
@@ -51,6 +52,9 @@ main()
         break                                     ;
       case 5:
         sauvegarde()                              ;
+        break                                     ;
+      case 6:
+        chargement()                              ;
         break                                     ;
       default:
         printf("Erreur de saisie")                ;
@@ -188,4 +192,37 @@ void sauvegarde()
     fclose(a)                             ;
     printf("Sauvegarde effectuée.\n %d notes sauvegardées\n", nbnotes) ;
   }
+
+  /*------------------------------------------
+  --                                        --
+  --             Procédure                  --
+  --             chargement                 --
+  --                                        --
+  --                                        --
+  --                                        --
+  --                                        --
+  -------------------------------------------*/
+
+
+
+void chargement()
+{
+  nbnotes = i - 1                          ;
+  float x                                  ;
+  int i, retour                            ;
+  FILE *a                                  ;
+
+  i = nbnotes                              ;
+
+  x = 1                                    ;
+  while(!=feof(a))
+  {
+    retour = fscanf(a, "%f", &x)           ;
+    if (retour != EOF)
+    {
+    tabnotes[i++] = x                      ;
+    }
+  }
+  fclose(a)                                ;
+  nbnotes = i                              ;
 }
