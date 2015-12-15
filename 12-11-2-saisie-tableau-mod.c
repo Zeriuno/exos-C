@@ -13,7 +13,7 @@ void sauvegarde()                                 ;
 void chargement()                                 ;
 float moyenne_calcul()                            ;
 float min, max, tabnotes[MAX_NOTES]               ;
-int nbnotes = 0                                   ;
+int nbnotes = 0, a_sauvegarder = 0                ;
 main()
 {
   float moyenne_main                              ;
@@ -88,6 +88,7 @@ void saisie()
   }
 
   nbnotes = i - 1                          ;
+  a_sauvegarder = 1                        ;
 }
 
 /*------------------------------------------
@@ -190,6 +191,7 @@ void sauvegarde()
     }
     fprintf(a, "\n")                      ;
     fclose(a)                             ;
+    a_sauvegarder = 0                     ;
     printf("Sauvegarde effectuée.\n %d notes sauvegardées\n", nbnotes) ;
   }
 
