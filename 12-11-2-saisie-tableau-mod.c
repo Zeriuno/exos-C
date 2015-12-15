@@ -11,7 +11,7 @@ void saisie()                                     ;
 void affichage(), min_max()                       ;
 float moyenne_calcul()                            ;
 float min, max, tabnotes[MAX_NOTES]               ;
-int nbnotes                                       ;
+int nbnotes = 0                                   ;
 main()
 {
   float moyenne_main                              ;
@@ -94,12 +94,20 @@ void saisie()
 void affichage()
 {
   int i                                    ;
+
+  if(nbnotes == 0)
+  {
+    printf("Pas de notes.")                ;
+  }
+  else
+  {
   printf("Voici les notes saisies :\n\n")  ;
   for (i=0; i < nbnotes ; i++)
   {
     printf("%6.2f\n", tabnotes[i])         ;
   }
   printf("\n")                             ;
+  }
 }
 
 
