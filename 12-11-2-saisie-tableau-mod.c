@@ -208,13 +208,19 @@ void sauvegarde()
 void chargement()
 {
   nbnotes = i - 1                          ;
+  char nomfichier[200]                     ;
   float x                                  ;
   int i, retour                            ;
   FILE *a                                  ;
 
-  i = nbnotes                              ;
 
-  x = 1                                    ;
+  printf("Saisir le nom du fichier à ouvrir: ") ;
+  scanf("%s", nomfichier)                  ;
+
+  a=fopen(nomfichier,"r")                  ;
+
+
+  i = nbnotes                              ;
   while(!=feof(a))
   {
     retour = fscanf(a, "%f", &x)           ;
