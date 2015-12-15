@@ -161,29 +161,31 @@ float moyenne_calcul()
 
 void min_max()
 {
-  printf("Note minimale : %6.2f\n", min)   ;
-  printf("Note maximale : %6.2f\n", max)   ;
+  printf("Note minimale : %6.2f\n", min)  ;
+  printf("Note maximale : %6.2f\n", max)  ;
 }
 
 void sauvegarde()
 {
-  char fichier[200]                        ;
-  FILE *a                                  ;
+  char fichier[200]                       ;
+  int i                                   ;
+  FILE *a                                 ;
 
   if(nbnotes == 0 )
   {
-    printf("Aucune note à sauvegarder.")
+    printf("Aucune note à sauvegarder.")  ;
   }
   else
   {
-    printf("Saisir le nom du fichier : ")    ;
-    scanf("%s", nomfichier)                  ;
-    a = fopen(nomfichier, "w")            ;
+    printf("Saisir le nom du fichier : ") ;
+    scanf("%s", fichier)                  ;
+    a = fopen(fichier, "w")               ;
     for(i=0; i<nbnotes; i++)
     {
       fprintf(a, "%6.2f", tabnotes[i])    ;
     }
-    fprintf(f1, "\n")                     ;
+    fprintf(a, "\n")                      ;
     fclose(a)                             ;
+    printf("Sauvegarde effectuée.\n %d notes sauvegardées\n", nbnotes) ;
   }
 }
