@@ -165,6 +165,19 @@ void min_max()
   printf("Note maximale : %6.2f\n", max)  ;
 }
 
+
+/*------------------------------------------
+--                                        --
+--             Procédure                  --
+--             sauvegarde                 --
+--                                        --
+--                                        --
+--                                        --
+--                                        --
+-------------------------------------------*/
+
+
+
 void sauvegarde()
 {
   char fichier[200]                       ;
