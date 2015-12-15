@@ -9,6 +9,7 @@ Jeu de tests
 #define MAX_NOTES 20
 void saisie()                                     ;
 void affichage(), min_max()                       ;
+void sauvegarde()                                 ;
 float moyenne_calcul()                            ;
 float min, max, tabnotes[MAX_NOTES]               ;
 int nbnotes = 0                                   ;
@@ -24,6 +25,7 @@ main()
     printf("-2- Affichage\n")                     ;
     printf("-3- Moyenne\n")                       ;
     printf("-4- min et MAX\n")                    ;
+    printf("-5- Sauvegarde\n")                    ;
     printf("-0- Quitter\n\n")                     ;
     printf("Choix : ")                            ;
 
@@ -46,6 +48,9 @@ main()
         break                                     ;
       case 4:
         min_max()                                 ;
+        break                                     ;
+      case 5:
+        sauvegarde()                              ;
         break                                     ;
       default:
         printf("Erreur de saisie")                ;
@@ -158,4 +163,9 @@ void min_max()
 {
   printf("Note minimale : %6.2f\n", min)   ;
   printf("Note maximale : %6.2f\n", max)   ;
+}
+
+void sauvegarde()
+{
+
 }
