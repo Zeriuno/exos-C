@@ -32,7 +32,7 @@ main()
     switch(choix)
     {
       case 0:
-        printf("Au revoir.")                      ;
+        printf("Au revoir.\n")                    ;
         break                                     ;
       case 1:
         saisie()                                  ;
