@@ -167,5 +167,23 @@ void min_max()
 
 void sauvegarde()
 {
+  char fichier[200]                        ;
+  FILE *a                                  ;
 
+  if(nbnotes == 0 )
+  {
+    printf("Aucune note à sauvegarder.")
+  }
+  else
+  {
+    printf("Saisir le nom du fichier : ")    ;
+    scanf("%s", nomfichier)                  ;
+    a = fopen(nomfichier, "w")            ;
+    for(i=0; i<nbnotes; i++)
+    {
+      fprintf(a, "%6.2f", tabnotes[i])    ;
+    }
+    fprintf(f1, "\n")                     ;
+    fclose(a)                             ;
+  }
 }
