@@ -4,15 +4,21 @@ Saisie de notes dans un tableau, '-1' arrête la saisie
 
 Jeu de tests
 19 20 10 10 0 1 15 -1
+
+à faire:
+
+* lorsqu'on quitte, vérifier si une sauvegarde est nécessaire. On peut le faire en particulier avec une procédure. Et le test de sauvegarde une autre procédure.
+* proposer comme nom de sauvegarde et de chargement le dernier nom utilisé
 */
 #include <stdio.h>
 #define MAX_NOTES 20
 void saisie()                                     ;
 void affichage(), min_max()                       ;
 void sauvegarde()                                 ;
+void chargement()                                 ;
 float moyenne_calcul()                            ;
 float min, max, tabnotes[MAX_NOTES]               ;
-int nbnotes = 0                                   ;
+int nbnotes = 0, a_sauvegarder = 0                ;
 main()
 {
   float moyenne_main                              ;
@@ -52,6 +58,9 @@ main()
       case 5:
         sauvegarde()                              ;
         break                                     ;
+      case 6:
+        chargement()                              ;
+        break                                     ;
       default:
         printf("Erreur de saisie")                ;
         break                                     ;
@@ -84,6 +93,7 @@ void saisie()
   }
 
   nbnotes = i - 1                          ;
+  a_sauvegarder = 1                        ;
 }
 
 /*------------------------------------------
@@ -199,6 +209,66 @@ void sauvegarde()
     }
     fprintf(a, "\n")                      ;
     fclose(a)                             ;
+    a_sauvegarder = 0                     ;
     printf("Sauvegarde effectuée.\n %d notes sauvegardées\n", nbnotes) ;
   }
+
+  /*------------------------------------------
+  --                                        --
+  --             Procédure                  --
+  --             chargement                 --
+  --                                        --
+  --                                        --
+  --                                        --
+  --                                        --
+  -------------------------------------------*/
+
+
+
+void chargement()
+{
+  nbnotes = i - 1                          ;
+  char nomfichier[200], reponse_sauvegarde ;
+  float x                                  ;
+  int i, retour                            ;
+  FILE *a                                  ;
+
+  /*------------------------------------------
+  --                                        --
+  --             code à                     --
+  --             externaliser               --
+  --     procédure test sauvegarde          --
+  --                                        --
+  --                                        --
+  --                                        --
+  -------------------------------------------*/
+
+  if(a_sauvegarder)
+  {
+    printf("Les données ont été modifiées\n")          ;
+    printf("Voulez-vous faire une sauvegarde ? (o/n)") ;
+    scanf("%c", &reponse_sauvegarde)       ;
+    if(reponse_sauvegarde == 'o')
+    {
+      sauvegarde()                         ;
+    }
+
+  }
+
+  printf("Saisir le nom du fichier à ouvrir: ")        ;
+  scanf("%s", nomfichier)                  ;
+
+  a=fopen(nomfichier,"r")                  ;
+  i = 0                                    ; /*quand on charge, on charge dans le début du tableau, pas à la fin*/
+  while(!feof(a))
+  {
+    retour = fscanf(a, "%f", &x)           ;
+    if (retour != EOF)
+    {
+    tabnotes[i++] = x                      ;
+    }
+  }
+  fclose(a)                                ;
+  nbnotes = i                              ;
+  printf("%d notes lues.\n", %nbnotes)     ;
 }
