@@ -32,7 +32,7 @@ Déclarations préliminaires
 
 void saisie()    ;
 void affichage() ;
-
+void conv_maj(char chaine[])  ;
 
 /*----------------------------------
 
@@ -136,5 +136,16 @@ void affichage()
       eleve = tabeleve[i] ;
       printf("%s %s %d\n", eleve.nom, eleve.prenom, eleve.age) ;
     }
+  }
+}
+
+void conv_maj(char chaine[])
+{
+  int i, taille ;
+
+  taille = strlen(chaine) ;
+  for (i = 0 ; i < taille ; i++)
+  {
+    chaine[i] = toupper(chaine[i]) ;
   }
 }
