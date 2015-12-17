@@ -99,10 +99,12 @@ void saisie()
     printf("--------------------\n") ; /* de moi */
     printf("Nom ('!' pour terminer): ") ;
     scanf("%s", eleve.nom)     ;
+    conv_maj(eleve.nom)        ;
     if(strcmp(eleve.nom,"!") != 0) /* de moi */
     {
       printf("Prénom : ")       ;
       scanf("%s", eleve.prenom) ;
+      conv_maj(eleve.prenom)    ;
       printf("Âge : ")          ;
       scanf("%d", &eleve.age)   ;
 
