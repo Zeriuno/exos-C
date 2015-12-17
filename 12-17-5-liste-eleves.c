@@ -35,6 +35,8 @@ void affichage() ;
 void chargement() ;
 void conv_maj(char chaine[])  ;
 void sauvegarde() ;
+void suppression() ;
+
 /*----------------------------------
 
 Menu de choix
@@ -232,4 +234,9 @@ void chargement()
   fclose(f1) ;
   nbeleves = i ;
   printf("%d élèves lus.\n", nbeleves) ;
+}
+
+void suppression()
+{
+  nbeleves = 0 ;
 }
