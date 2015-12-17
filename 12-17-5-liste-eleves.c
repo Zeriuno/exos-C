@@ -124,6 +124,10 @@ void affichage()
 {
   int i;
   struct etudiant eleve ;
+  /*if*/
   for(i = 0 ; i < nbeleves ; i++)
-  printf("Affichage.") ;
+  {
+    eleve = tabeleve[i] ;
+    printf("%s %s %d\n", eleve.nom, eleve.prenom, eleve.age) ;
+  }
 }
