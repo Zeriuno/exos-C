@@ -32,6 +32,7 @@ Déclarations préliminaires
 
 void saisie()    ;
 void affichage() ;
+void chargement() ;
 void conv_maj(char chaine[])  ;
 void sauvegarde() ;
 /*----------------------------------
@@ -51,6 +52,7 @@ main()
     printf("-1- Saisie\n")    ;
     printf("-2- Affichage\n") ;
     printf("-3- Sauvegarder\n") ;
+    printf("-4- Chargement\n") ;
     printf("-0- Quitter\n\n") ;
     printf("Choix : ")        ;
 
@@ -69,6 +71,9 @@ main()
         break       ;
       case 3 :
         sauvegarde() ;
+        break ;
+      case 4 :
+        chargement() ;
         break ;
       default:
         printf("Erreur de saisie.") ;
@@ -193,4 +198,38 @@ void sauvegarde()
     fclose(f1);
     printf("%d élèves sauvegardés.\n", nbeleves) ;
   }
+}
+
+/*----------------------------------
+
+Chargement
+
+----------------------------------*/
+
+void chargement()
+{
+  const MAX_NOMFICHIER = 200 ; /* de moi */
+
+  char nomfichier[MAX_NOMFICHIER];/* de moi */
+  FILE *f1 ;
+  int lectureOK ;
+  struct etudiant eleve ;
+  int i ;
+
+  printf("Nom du fichier à charger : ") ;
+  scanf("%s", nomfichier) ;
+  f1 = fopen(nomfichier,"r") ;
+  while(!feof(f1))
+  {
+    lectureOK = fscanf(f1, "%s %s %d", eleve.nom, eleve.prenom, &eleve.age) ;
+    if(lectureOK != EOF)
+    {
+      conv_maj(eleve.nom)        ;
+      conv_maj(eleve.prenom)        ;
+      tabeleve[i++] = eleve     ;
+    }
+  }
+  fclose(f1) ;
+  nbeleves = i ;
+  printf("%d élèves lus.\n", nbeleves) ;
 }
