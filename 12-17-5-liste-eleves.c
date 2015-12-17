@@ -57,15 +57,15 @@ main()
 
     switch(choix)
     {
+      case 0 :
+        printf("Au revoir.\n") ;
+        break ;
       case 1 :
         saisie() ;
         break    ;
       case 2 :
         affichage() ;
         break       ;
-      case 3 :
-        printf("Au revoir.") ;
-        break ;
 
       default:
         printf("Erreur de saisie.") ;
@@ -124,10 +124,17 @@ void affichage()
 {
   int i;
   struct etudiant eleve ;
-  /*if*/
-  for(i = 0 ; i < nbeleves ; i++)
+
+  if(nbeleves == 0)
   {
-    eleve = tabeleve[i] ;
-    printf("%s %s %d\n", eleve.nom, eleve.prenom, eleve.age) ;
+    printf("Aucun élève n'a été saisi.\n") ;
+  }
+  else
+  {
+    for(i = 0 ; i < nbeleves ; i++)
+    {
+      eleve = tabeleve[i] ;
+      printf("%s %s %d\n", eleve.nom, eleve.prenom, eleve.age) ;
+    }
   }
 }
