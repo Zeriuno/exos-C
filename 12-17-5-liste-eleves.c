@@ -87,6 +87,8 @@ void saisie()
   const MAXNOM = 200 ; /* de moi */
   const MAXPRENOM = 200 ; /* de moi */
   char nom[MAXNOM], prenom[MAXPRENOM] ;
+  struct etudiant eleve ;
+  int i ;
 
   strcpy(eleve.nom, "début")          ;
 
@@ -102,10 +104,10 @@ void saisie()
       printf("Prénom : ")       ;
       scanf("%s", eleve.prenom) ;
       printf("Âge : ")          ;
-      scanf("%d", eleve.age)    ;
+      scanf("%d", &eleve.age)   ;
 
       printf("\n")              ; /* de moi */
-      tabeleve[i++] = eleve
+      tabeleve[i++] = eleve     ;
     }
   }
   nbeleves = i ;
@@ -120,5 +122,8 @@ Affichage
 
 void affichage()
 {
+  int i;
+  struct etudiant eleve ;
+  for(i = 0 ; i < nbeleves ; i++)
   printf("Affichage.") ;
 }
