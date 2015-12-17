@@ -98,7 +98,7 @@ void saisie()
     printf("Saisie d'un étudiant\n") ; /* de moi */
     printf("--------------------\n") ; /* de moi */
     printf("Nom ('!' pour terminer): ") ;
-    scanf("%s", &eleve.nom)     ;
+    scanf("%s", eleve.nom)     ;
     if(strcmp(eleve.nom,"!") != 0) /* de moi */
     {
       printf("Prénom : ")       ;
