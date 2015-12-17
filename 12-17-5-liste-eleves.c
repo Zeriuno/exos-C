@@ -33,7 +33,7 @@ Déclarations préliminaires
 void saisie()    ;
 void affichage() ;
 void conv_maj(char chaine[])  ;
-
+void sauvegarde() ;
 /*----------------------------------
 
 Menu de choix
@@ -50,6 +50,7 @@ main()
     printf("\n")              ;
     printf("-1- Saisie\n")    ;
     printf("-2- Affichage\n") ;
+    printf("-3- Sauvegarder\n") ;
     printf("-0- Quitter\n\n") ;
     printf("Choix : ")        ;
 
@@ -66,7 +67,9 @@ main()
       case 2 :
         affichage() ;
         break       ;
-
+      case 3 :
+        sauvegarde() ;
+        break ;
       default:
         printf("Erreur de saisie.") ;
         break ;
@@ -141,6 +144,12 @@ void affichage()
   }
 }
 
+/*----------------------------------
+
+Conversion en majuscules
+
+----------------------------------*/
+
 void conv_maj(char chaine[])
 {
   int i, taille ;
@@ -149,5 +158,39 @@ void conv_maj(char chaine[])
   for (i = 0 ; i < taille ; i++)
   {
     chaine[i] = toupper(chaine[i]) ;
+  }
+}
+
+/*----------------------------------
+
+Sauvegarde
+
+----------------------------------*/
+
+void sauvegarde()
+{
+  const NOMFICHIER = 200 ;
+
+  char nomfichier[NOMFICHIER] ;
+  FILE *f1 ;
+  int i;
+  struct etudiant eleve ;
+
+  if(nbeleves == 0)
+  {
+    printf("Aucun élève n'a été saisi.\n") ;
+  }
+  else
+  {
+    printf("Saisir le nom du fichier : ") ;
+    scanf("%s", nomfichier) ;
+    f1 = fopen(nomfichier, "w") ;
+    for(i = 0 ; i < nbeleves ; i++)
+    {
+      eleve = tabeleve[i] ;
+      fprintf(f1, "%s %s %d\n", eleve.nom, eleve.prenom, eleve.age) ;
+    }
+    fclose(f1);
+    printf("%d élèves sauvegardés.\n", nbeleves) ;
   }
 }
