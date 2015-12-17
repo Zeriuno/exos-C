@@ -214,9 +214,8 @@ void chargement()
 
   char nomfichier[MAX_NOMFICHIER];/* de moi */
   FILE *f1 ;
-  int lectureOK ;
+  int i = 0, lectureOK ;
   struct etudiant eleve ;
-  int i ;
 
   printf("Nom du fichier à charger : ") ;
   scanf("%s", nomfichier) ;
