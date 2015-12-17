@@ -84,32 +84,32 @@ Saisie
 
 void saisie()
 {
-  const MAXNOM = 200 ;
-  const MAXPRENOM = 200 ;
+  const MAXNOM = 200 ; /* de moi */
+  const MAXPRENOM = 200 ; /* de moi */
   char nom[MAXNOM], prenom[MAXPRENOM] ;
 
   strcpy(eleve.nom, "début")          ;
 
-  while(strcmp(eleve.nom,"!") != 0)
+  while(strcmp(eleve.nom,"!") != 0) /* de moi */
   {
-    printf("--------------------") ;
-    printf("Saisie d'un étudiant") ;
-    printf("--------------------") ;
+    printf("--------------------") ; /* de moi */
+    printf("Saisie d'un étudiant") ; /* de moi */
+    printf("--------------------") ; /* de moi */
     printf("Nom ('!' pour terminer): ") ;
     printf("%s", eleve.nom)     ;
-    if(nom != '!\n')
+    if(strcmp(eleve.nom,"!") != 0) /* de moi */
     {
       printf("Prénom : ")       ;
       scanf("%s", eleve.prenom) ;
       printf("Âge : ")          ;
       scanf("%d", eleve.age)    ;
 
-      printf("\n")              ;
+      printf("\n")              ; /* de moi */
       tabeleve[i++] = eleve
     }
   }
   nbeleves = i ;
-  printf("%d élèves saisis.", nbeleves) ;
+  printf("%d élèves saisis.\n", nbeleves) ;
 }
 
 /*----------------------------------
