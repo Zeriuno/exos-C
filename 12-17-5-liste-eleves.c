@@ -74,6 +74,7 @@ main()
     switch(choix)
     {
       case 0 :
+        sauvegarde_test()      ;
         printf("Au revoir.\n") ;
         break ;
       case 1 :
@@ -416,7 +417,7 @@ void eliminer1()
 
 /*----------------------------------
 
-eliminer1
+sauvegarde_test, code de moi
 
 ----------------------------------*/
 
