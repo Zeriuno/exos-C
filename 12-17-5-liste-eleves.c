@@ -125,7 +125,7 @@ Saisie
 void saisie()
 {
   const MAXPRENOM = 200 ; /* de moi */
-  char prenom[MAXPRENOM] ;
+  char prenom[MAXPRENOM], nom[MAX_NOM] ;
   struct etudiant eleve ;
   int i ;
 
