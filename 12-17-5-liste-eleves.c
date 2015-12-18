@@ -34,6 +34,7 @@ void saisie()    ;
 void affichage() ;
 void chargement() ;
 void conv_maj(char chaine[])  ;
+int recherche(char nomrech[]);
 void sauvegarde() ;
 void suppression() ;
 
@@ -248,4 +249,38 @@ Suppression
 void suppression()
 {
   nbeleves = 0 ;
+}
+
+/*----------------------------------
+
+Recherche
+
+----------------------------------*/
+
+
+int recherche(char nomrech[]);
+
+{
+  int i, numcase                           ;
+  struct etudiant eleve                    ;
+
+  numcase = -1                             ;
+
+  if(nbeleves == 0)
+  {
+    printf("Aucun élève n'a été saisi.\n") ;
+  }
+  else
+  {
+    for(i = 0 ; i < nbeleves ; i++)
+    {
+      eleve = tabeleve[i]                  ;
+      if (strcmp(eleve.nom, nomrech) == 0)
+        {
+          printf("Élève trouvé")           ;
+          numcase = i                      ;
+        }
+    }
+  }
+  return numcase                           ;
 }
