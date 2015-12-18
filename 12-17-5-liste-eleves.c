@@ -90,7 +90,7 @@ main()
       case 6 :
         if(nbeleves == 0)
         {
-          printf="Aucun élève dans la base.";
+          printf("Aucun élève dans la base.");
         }
         else
         {
