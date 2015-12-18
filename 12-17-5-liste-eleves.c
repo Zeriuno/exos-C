@@ -55,6 +55,7 @@ main()
     printf("-2- Affichage\n") ;
     printf("-3- Sauvegarder\n") ;
     printf("-4- Chargement\n") ;
+    printf("-5- Vider\n") ;
     printf("-0- Quitter\n\n") ;
     printf("Choix : ")        ;
 
@@ -75,6 +76,9 @@ main()
         sauvegarde() ;
         break ;
       case 4 :
+        chargement() ;
+        break ;
+      case 5 :
         chargement() ;
         break ;
       default:
