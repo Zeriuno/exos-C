@@ -31,13 +31,13 @@ Déclarations préliminaires
 
 ----------------------------------*/
 
-void saisie()    ;
-void affichage() ;
-void chargement() ;
+void saisie()                 ;
+void affichage()              ;
+void chargement()             ;
 void conv_maj(char chaine[])  ;
-int recherche(char nomrech[]);
-void sauvegarde() ;
-void suppression() ;
+int recherche(char nomrech[]) ;
+void sauvegarde()             ;
+void suppression()            ;
 
 /*----------------------------------
 
