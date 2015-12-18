@@ -10,7 +10,7 @@ Code de M. Léry
 #include <string.h>
 
 #define TAILLE 200
-
+#define NON_TROUVE -1
 /* Type global */
 
 struct etudiant {
@@ -261,10 +261,8 @@ Recherche
 int recherche(char nomrech[]);
 
 {
-  int i, numcase                           ;
+  int i, numcase = NON_TROUVE              ;
   struct etudiant eleve                    ;
-
-  numcase = -1                             ;
 
   if(nbeleves == 0)
   {
