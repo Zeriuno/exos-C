@@ -49,7 +49,9 @@ Menu de choix
 main()
 {
 
-  int choix = -1 ;
+  int choix = -1, numero ;
+  char nom[MAX_NOM]      ;
+  struct etudiant eleve  ;
   while(choix != 0)
   {
     printf("\n")              ;
@@ -58,6 +60,7 @@ main()
     printf("-3- Sauvegarder\n") ;
     printf("-4- Chargement\n") ;
     printf("-5- Vider\n") ;
+    printf("-6- Rechercher\n") ;
     printf("-0- Quitter\n\n") ;
     printf("Choix : ")        ;
 
@@ -83,7 +86,14 @@ main()
       case 5 :
         chargement() ;
         break ;
-      default:
+      case 6 :
+        printf("Saisissez le nom à recherche : ") ;
+        scanf("%s", nom) ;
+        numero = recherche(nom) ;
+        eleve = tabeleves[numero] ;
+        printf("%s %s %d\n", eleve.nom, eleve.prenom, eleve.age) ;
+        break ;
+     default:
         printf("Erreur de saisie.") ;
         break ;
 
