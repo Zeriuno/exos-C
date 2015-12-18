@@ -35,6 +35,7 @@ void saisie()                 ;
 void affichage()              ;
 void chargement()             ;
 void conv_maj(char chaine[])  ;
+void eliminer1()              ;
 void modification()           ;
 int recherche(char nomrech[]) ;
 void sauvegarde()             ;
@@ -63,6 +64,7 @@ main()
     printf("-5- Vider\n") ;
     printf("-6- Rechercher\n") ;
     printf("-6- Modifier\n") ;
+    printf("-7- Éliminer un élève\n") ;
     printf("-0- Quitter\n\n") ;
     printf("Choix : ")        ;
 
@@ -111,6 +113,9 @@ main()
         break ;
       case 7 :
         modification() ;
+        break ;
+      case 8 :
+        eliminer1()    ;
         break ;
      default:
         printf("Erreur de saisie.") ;
@@ -359,4 +364,42 @@ void modification()
       tabeleve[numero] = eleve ;
      }
    }
+}
+
+
+/*----------------------------------
+
+eliminer1
+
+----------------------------------*/
+
+void eliminer1()
+{
+  int i, numero              ;
+  char nomrecherche[MAX_NOM] ;
+  struct etudiant eleve      ;
+
+  if(nbeleves == 0)
+  {
+    printf("Aucun élève dans la base. Élimination impossible.\n") ;
+  }
+  else
+  {
+    printf("Saisissez le nom à éliminer de la base : ") ;
+    scanf("%s", nomrecherche) ;
+    numero = recherche(nomrecherche) ;
+    if(numero == NON_TROUVE)
+    {
+      printf("%s n'a pas été trouvé. Élimination impossible.\n", nomrecherche) ;
+    }
+    else
+    {
+      for(i = numero ; i < nbeleves ; i++)
+      {
+        tabeleve[i] = tabeleve[i+1] ;
+      }
+    printf("Élève %s %s %d éliminé de la base.", eleve.nom, eleve.prenom, eleve.age) ;
+    nbeleves-- ;
+    }
+  }
 }
