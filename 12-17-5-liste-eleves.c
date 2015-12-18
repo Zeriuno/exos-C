@@ -10,7 +10,7 @@ Code de M. Léry
 #include <string.h>
 
 #define TAILLE 200
-#define NON_TROUVE -1
+#define NON_TROUVE -1 /*Ceci afin de rendre plus compréhensible le code à la simple lecture*/
 /* Type global */
 
 struct etudiant {
