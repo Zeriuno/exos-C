@@ -62,6 +62,7 @@ main()
     printf("-4- Chargement\n") ;
     printf("-5- Vider\n") ;
     printf("-6- Rechercher\n") ;
+    printf("-6- Modifier\n") ;
     printf("-0- Quitter\n\n") ;
     printf("Choix : ")        ;
 
