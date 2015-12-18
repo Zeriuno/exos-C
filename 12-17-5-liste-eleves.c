@@ -106,7 +106,6 @@ main()
             printf("%s %s %d\n", eleve.nom, eleve.prenom, eleve.age) ;
           }
         }
-
         break ;
      default:
         printf("Erreur de saisie.") ;
