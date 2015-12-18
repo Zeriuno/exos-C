@@ -258,8 +258,7 @@ Recherche
 ----------------------------------*/
 
 
-int recherche(char nomrech[]);
-
+int recherche(char nomrech[])
 {
   int i, numcase = NON_TROUVE              ;
   struct etudiant eleve                    ;
