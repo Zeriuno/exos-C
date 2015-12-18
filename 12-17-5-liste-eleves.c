@@ -50,7 +50,7 @@ main()
 {
 
   int choix = -1, numero ;
-  char nom[MAX_NOM]      ;
+  char nomrecherche[MAX_NOM] ;
   struct etudiant eleve  ;
   while(choix != 0)
   {
@@ -87,18 +87,26 @@ main()
         chargement() ;
         break ;
       case 6 :
-        printf("Saisissez le nom à recherche : ") ;
-        scanf("%s", nom) ;
-        numero = recherche(nom) ;
-        if(numero == NON_TROUVE)
+        if(nbeleves == 0)
         {
-          printf("%s n'a pas été trouvé.", nom) ;
+          printf="Aucun élève dans la base.";
         }
         else
         {
-          eleve = tabeleves[numero] ;
-          printf("%s %s %d\n", eleve.nom, eleve.prenom, eleve.age) ;
+          printf("Saisissez le nom à recherche : ") ;
+          scanf("%s", nomrecherche) ;
+          numero = recherche(nomrecherche) ;
+          if(numero == NON_TROUVE)
+          {
+            printf("%s n'a pas été trouvé.", nomrecherche) ;
+          }
+          else
+          {
+            eleve = tabeleve[numero] ;
+            printf("%s %s %d\n", eleve.nom, eleve.prenom, eleve.age) ;
+          }
         }
+
         break ;
      default:
         printf("Erreur de saisie.") ;
@@ -118,7 +126,7 @@ Saisie
 void saisie()
 {
   const MAXPRENOM = 200 ; /* de moi */
-  char nom[MAXNOM], prenom[MAXPRENOM] ;
+  char prenom[MAXPRENOM] ;
   struct etudiant eleve ;
   int i ;
 
