@@ -239,6 +239,12 @@ void chargement()
   printf("%d élèves lus.\n", nbeleves) ;
 }
 
+/*----------------------------------
+
+Suppression
+
+----------------------------------*/
+
 void suppression()
 {
   nbeleves = 0 ;
