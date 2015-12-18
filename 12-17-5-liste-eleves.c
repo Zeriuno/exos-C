@@ -108,6 +108,9 @@ main()
           }
         }
         break ;
+      case 7 :
+        modification() ;
+        break ;
      default:
         printf("Erreur de saisie.") ;
         break ;
