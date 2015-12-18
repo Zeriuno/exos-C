@@ -35,6 +35,7 @@ void saisie()                 ;
 void affichage()              ;
 void chargement()             ;
 void conv_maj(char chaine[])  ;
+void modification()           ;
 int recherche(char nomrech[]) ;
 void sauvegarde()             ;
 void suppression()            ;
@@ -306,4 +307,52 @@ int recherche(char nomrech[])
     }
   }
   return numcase                           ;
+}
+
+
+/*----------------------------------
+
+Modification
+
+----------------------------------*/
+
+void modification()
+{
+  int numero                 ;
+  char nomrecherche[MAX_NOM] ;
+  struct etudiant eleve      ;
+
+  if(nbeleves == 0)
+  {
+    printf("Aucun élève dans la base. Modification impossible.\n") ;
+  }
+  else
+  {
+    printf("Saisissez le nom à recherche : ") ;
+    scanf("%s", nomrecherche) ;
+    numero = recherche(nomrecherche) ;
+    if(numero == NON_TROUVE)
+    {
+      printf("%s n'a pas été trouvé. Modification impossible.\n", nomrecherche) ;
+    }
+    else
+    {
+      eleve = tabeleve[numero] ;
+      printf("Nom actuel : %s --", eleve.nom);
+      printf("Nouveau nom : ") ;
+      scanf("%s", eleve.nom)   ;
+      conv_maj(eleve.nom)      ;
+
+      printf("Prénom actuel : %s --", eleve.prenom);
+      printf("Nouveau prénom : ") ;
+      scanf("%s", eleve.prenom)   ;
+      conv_maj(eleve.prenom)      ;
+
+      printf("Âge actuel : %d --", eleve.age);
+      printf("Nouvel âge : ")  ;
+      scanf("%d", &eleve.age)  ;
+
+      tabeleve[numero] = eleve ;
+     }
+   }
 }
