@@ -90,8 +90,15 @@ main()
         printf("Saisissez le nom à recherche : ") ;
         scanf("%s", nom) ;
         numero = recherche(nom) ;
-        eleve = tabeleves[numero] ;
-        printf("%s %s %d\n", eleve.nom, eleve.prenom, eleve.age) ;
+        if(numero == NON_TROUVE)
+        {
+          printf("%s n'a pas été trouvé.", nom) ;
+        }
+        else
+        {
+          eleve = tabeleves[numero] ;
+          printf("%s %s %d\n", eleve.nom, eleve.prenom, eleve.age) ;
+        }
         break ;
      default:
         printf("Erreur de saisie.") ;
