@@ -280,6 +280,8 @@ int recherche(char nomrech[])
   int i, numcase = NON_TROUVE              ;
   struct etudiant eleve                    ;
 
+  conv_maj(nomrech);
+
   if(nbeleves == 0)
   {
     printf("Aucun élève n'a été saisi.\n") ;
