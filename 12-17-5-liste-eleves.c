@@ -24,7 +24,7 @@ struct etudiant {
 /* Variable globale */
 struct etudiant tabeleve[TAILLE]                         ;
 int nbeleves = 0                                         ;
-
+int a_sauvegarder = 0                                    ;
 /*----------------------------------
 
 Déclarations préliminaires
@@ -39,6 +39,7 @@ void eliminer1()              ;
 void modification()           ;
 int recherche(char nomrech[]) ;
 void sauvegarde()             ;
+void sauvegarde_test()        ;
 void suppression()            ;
 
 /*----------------------------------
@@ -163,6 +164,7 @@ void saisie()
   }
   nbeleves = i ;
   printf("%d élèves saisis.\n", nbeleves) ;
+  a_sauvegarder = 1 ;
 }
 
 /*----------------------------------
@@ -238,6 +240,7 @@ void sauvegarde()
     }
     fclose(f1);
     printf("%d élèves sauvegardés.\n", nbeleves) ;
+    a_sauvegarder = 0 ;
   }
 }
 
@@ -255,6 +258,8 @@ void chargement()
   FILE *f1 ;
   int i = 0, lectureOK ;
   struct etudiant eleve ;
+
+  sauvegarde_test() ;
 
   printf("Nom du fichier à charger : ") ;
   scanf("%s", nomfichier) ;
@@ -283,6 +288,7 @@ Suppression
 void suppression()
 {
   nbeleves = 0 ;
+  a_sauvegarder = 1 ;
 }
 
 /*----------------------------------
@@ -362,6 +368,7 @@ void modification()
       scanf("%d", &eleve.age)  ;
 
       tabeleve[numero] = eleve ;
+      a_sauvegarder = 1 ;
      }
    }
 }
@@ -400,6 +407,32 @@ void eliminer1()
       }
     printf("Élève %s %s %d éliminé de la base.", eleve.nom, eleve.prenom, eleve.age) ;
     nbeleves-- ;
+    a_sauvegarder = 1 ;
+    }
+  }
+}
+
+
+
+/*----------------------------------
+
+eliminer1
+
+----------------------------------*/
+
+
+void sauvegarde_test()
+{
+  char reponse[2] ;
+
+  if(a_sauvegarder == 1)
+  {
+    printf("La base a été modifiée.\nVoulez-vous en faire une sauvegarde ? (O/N)") ;
+    scanf("%s", reponse) ;
+    toupper(reponse[0])  ;
+    if(reponse[0] = 'O')
+    {
+      sauvegarde();
     }
   }
 }
