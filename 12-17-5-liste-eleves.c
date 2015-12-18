@@ -12,7 +12,7 @@ Code de M. Léry
 #define TAILLE 200
 #define NON_TROUVE -1 /*Ceci afin de rendre plus compréhensible le code à la simple lecture*/
 /* Type global */
-#define MAXNOM 200 ; /* de moi */
+#define MAX_NOM 200 /* de moi */
 
 struct etudiant {
   char nom[20]                                           ;
