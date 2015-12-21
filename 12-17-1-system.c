@@ -2,7 +2,10 @@
 #include <stdlib.h>
 main()
 {
-  char uuid[20]                  ;
+  char uuid[100]                  ;
+  FILE *f ;
 
-  system("uuidgen")              ;
+  f = popen("uuidgen", "r") ;
+  fscanf(f, "%s", uuid)     ;
+  pclose(f) ;
 }
