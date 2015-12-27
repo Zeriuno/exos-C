@@ -14,11 +14,10 @@
 #include <string.h>
 #include <stdlib.h>
 
-char uuid()
-
 main()
 {
-  char prenom[100], nom[100], mel[100], fichier[204], tel[20], note[200] ;
+  char prenom[100], nom[100], mel[100], fichier[204], tel[20], uuid[40], note[200] ;
+  FILE *f1 ;
   FILE *vcard                                                            ;
 
   printf("              ****************\n") ;
@@ -49,19 +48,12 @@ main()
   strcat(fichier,prenom)                         ;
   strcat(fichier,".vcf")                         ;
   vcard = fopen(fichier, "w")                    ;
-  fprintf(vcard, "BEGIN:VCARD\nVERSION:3.0\nN:%s;%s;;;\nFN:%s %s\nORG:\nROLE:\nEMAIL;type=INTERNET:%s\nTEL;type=VOICE:+%s\nNOTE:%s\nEND:VCARD", nom, prenom, prenom, nom, mel, tel, note) ;
-  fclose(vcard)  ;
-  printf("Le fichier %s a bien été créé\n", fichier) ;
-}
-
-
-uuid()
-{
-  char uuid[40] ;
-  FILE *f1      ;
 
   f1 = popen("uuidgen", "r") ;
   fscanf(f1, "%s", uuid)     ;
   pclose(f1)                 ;
-  return(uuid)               ;
+
+  fprintf(vcard, "BEGIN:VCARD\nVERSION:3.0\nN:%s;%s;;;\nFN:%s %s\nORG:\nROLE:\nEMAIL;type=INTERNET:%s\nTEL;type=VOICE:+%s\nUID:urn:uuid:%s\nNOTE:%s\nEND:VCARD", nom, prenom, prenom, nom, mel, tel, uuid, note) ;
+  fclose(vcard)  ;
+  printf("Le fichier %s a bien été créé\n", fichier) ;
 }

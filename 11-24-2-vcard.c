@@ -12,9 +12,14 @@
   --------------------------------------*/
 
 #include <stdio.h>
+#include <stdlib.h>
+
 #define MAX_PRENOM = 30
 #define MAX_NOM = 50
 #define MAX_MEL = 20
+
+char uuid()
+
 main()
 {
 
