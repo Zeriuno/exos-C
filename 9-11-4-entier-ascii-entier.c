@@ -17,7 +17,7 @@ main()
   printf("Entrez une lettre : ")                                            ;
   scanf("%c", &poubelle)                                                    ;
   /* Et en cas de plusieurs caractères faux qui traînent dans la mémoire tampon?
-  while(poubelle(getchar()) != '\n'); code de Jean-Michel Léry              ;
+  while(poubelle=getchar()) != '\n'); code de Jean-Michel Léry              ;
   même signification que
   fflush(stdin);
   qui ne marche plus sur Linux */
