@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAXNOM 31
+#define MAXNOM 21  /*En cas de changement, songer à évaluer si changer l'espacement dans l'affichage*/
 #define MAXINV 99 /*La première case se trouvant à l'indice 0, un tableau de taille 99 contient 100 cases*/
 
 
@@ -106,13 +106,25 @@ void affichage()
   int i;
   for(i = 0; i < dans_inventaire; i++)
   {
-    printf("%d  %s %.2f\n", inventaire[i].code, inventaire[i].nom, inventaire[i].prix);
+    printf("%3d  %-20s %10.2f\n", inventaire[i].code, inventaire[i].nom, inventaire[i].prix);
   }
 }
 
 void affichage_sel()
 {
+  int i;
+  float seuil;
 
+  printf("Prix maximum : ");
+  scanf("%f", &seuil);
+
+  for(i = 0; i < dans_inventaire; i++)
+  {
+    if(inventaire[i].prix <= seuil)
+    {
+      printf("%3d  %-20s %10.2f\n", inventaire[i].code, inventaire[i].nom, inventaire[i].prix);
+    }
+  }
 }
 
 void modif_prix()
