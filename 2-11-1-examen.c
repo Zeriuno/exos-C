@@ -116,7 +116,7 @@ void affichage_sel()
   float seuil;
 
   printf("Prix maximum : ");
-  scanf("%f", &seuil);
+  scanf("%f", & seuil);
 
   for(i = 0; i < dans_inventaire; i++)
   {
@@ -129,7 +129,25 @@ void affichage_sel()
 
 void modif_prix()
 {
+  int code_cible, trouve = 0, i ;
 
+  printf("Code de l'article : ") ;
+  scanf("%d", &code_cible);
+  for(i = 0; i < dans_inventaire; i++)
+  {
+    if(inventaire[i].code == code_cible)
+    {
+      trouve = 1;
+      printf("Nom : %s\n", inventaire[i].nom);
+      printf("Prix actuel : %.2f", inventaire[i].prix);
+      printf("Nouveau prix : ");
+      scanf("%f", &inventaire[i].prix);
+    }
+  }
+  if(trouve == 0)
+  {
+    printf("Code article non trouvé.\n");
+  }
 }
 
 void affichage_tri()
