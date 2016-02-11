@@ -1,5 +1,24 @@
 #include <stdio.h>
+#define MAXNOM 30
 
+/*-----------------
+
+ Déclarations
+ préliminaires
+-----------------*/
+
+void saisie();
+void affichage();
+void affichage_sel();
+void modif_prix();
+void affichage_tri();
+
+
+struct a {
+  int code;
+  char nom[MAXNOM];
+  float prix;
+};
 main()
 {
   int choix;
@@ -16,28 +35,53 @@ main()
     scanf("%d", &choix) ;
     switch(choix)
     {
-      case 1:
-
+      case 1 :
+        saisie();
         break;
-      case :
-
+      case 2 :
+        affichage();
         break;
-      case :
-
+      case 3 :
+        affichage_sel();
         break;
-      case :
-
+      case 4 :
+        modif_prix();
         break;
-      case :
-
+      case 5 :
+        affichage_tri();
         break;
       case 0 :
-        printf("au revoir") ;
+        printf("au revoir\n") ;
         break;
       default:
-        printf("Le choix effectué n'est pas valide. Veuillez ressaisir.\n");
+        printf("Le choix effectué n'est pas valide. Veuillez ressaisir.\n") ;
         break;
 
     }
   }
+}
+
+void saisie()
+{
+
+}
+
+void affichage()
+{
+
+}
+
+void affichage_sel()
+{
+
+}
+
+void modif_prix()
+{
+
+}
+
+void affichage_tri()
+{
+
 }
