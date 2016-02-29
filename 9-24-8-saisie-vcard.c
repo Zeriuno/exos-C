@@ -32,6 +32,7 @@ main()
   while((c=getchar()) != '\0')
   {
     nom[i] = c                                   ;
+    i++;
   }
   nom[i+1] = '\0'                                ;
   i = 0                                          ;
@@ -39,10 +40,17 @@ main()
   while((c=getchar()) != '\0')
   {
     mel[i] = c                                   ;
+    i++                                          ;
   }
   mel[i+1] = '\0'                                ;
+  i = 0                                          ;
   printf("Écris son numéro de téléphone (je mets le +, tu mets le code pays, et pas d'espaces) : ") ;
-  scanf("%s", tel)                               ;
+  while((c = getchar()) != '\0')
+  {
+    tel[i] = c                                   ;
+    i++                                          ;
+  }
+  tel[i+1] = '\0'                                ;
   strcat(fichier,nom)                            ;
   strcat(fichier,prenom)                         ;
   strcat(fichier,".vcf")                         ;
