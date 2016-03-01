@@ -2,7 +2,8 @@
 #include <string.h>
 main()
 {
-  char prenom[100], nom[100], mel[100], fichier[204], tel[20] ;
+  char c, prenom[100], nom[100], mel[100], fichier[204], tel[20] ;
+  int i=0 ;
   FILE *vcard                                                 ;
 
   printf("              ****************\n") ;
@@ -20,7 +21,12 @@ main()
   printf("Je vais les réunir dans un fichier\n") ;
 
   printf("Écris le prénom de la personne : ")    ;
-  scanf("%s", prenom)                            ;
+  while((c=getchar()) != '\n')
+  {
+    prenom[i] = c                                ;
+    i++                                          ;
+  }
+  prenom[i+1] = '\0'                             ;
   printf("Écris son nom : ")                     ;
   scanf("%s", nom)                               ;
   printf("Écris son adresse mél : ")             ;
