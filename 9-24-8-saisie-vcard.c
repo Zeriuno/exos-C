@@ -3,8 +3,8 @@
 main()
 {
   char c, prenom[100], nom[100], mel[100], fichier[204], tel[20] ;
-  int i=0 ;
-  FILE *vcard                                                 ;
+  int i=0                                                        ;
+  FILE *vcard                                                    ;
 
   printf("Nous allons créer une vCard\n")        ;
   printf("Tu vas écrire les informations\n")     ;
@@ -17,12 +17,30 @@ main()
     i++                                          ;
   }
   prenom[i+1] = '\0'                             ;
+  i = 0                                          ;
   printf("Écris son nom : ")                     ;
-  scanf("%s", nom)                               ;
+  while((c=getchar()) != '\0')
+  {
+    nom[i] = c                                   ;
+    i++;
+  }
+  nom[i+1] = '\0'                                ;
+  i = 0                                          ;
   printf("Écris son adresse mél : ")             ;
-  scanf("%s", mel)                               ;
+  while((c=getchar()) != '\0')
+  {
+    mel[i] = c                                   ;
+    i++                                          ;
+  }
+  mel[i+1] = '\0'                                ;
+  i = 0                                          ;
   printf("Écris son numéro de téléphone (je mets le +, tu mets le code pays, et pas d'espaces) : ") ;
-  scanf("%s", tel)                               ;
+  while((c = getchar()) != '\0')
+  {
+    tel[i] = c                                   ;
+    i++                                          ;
+  }
+  tel[i+1] = '\0'                                ;
   strcat(fichier,nom)                            ;
   strcat(fichier,prenom)                         ;
   strcat(fichier,".vcf")                         ;
