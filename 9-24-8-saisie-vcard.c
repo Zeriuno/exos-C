@@ -6,16 +6,6 @@ main()
   int i=0 ;
   FILE *vcard                                                 ;
 
-  printf("              ****************\n") ;
-  printf("              ** ATTENTION! **\n") ;
-  printf("              ** JE SUIS UN **\n") ;
-  printf("              ** PROTOTYPE! **\n") ;
-  printf("              **            **\n") ;
-  printf("              ** JE NE SAIS **\n") ;
-  printf("              **  PAS GÉRER **\n") ;
-  printf("              **LES ESPACES!**\n") ;
-  printf("              ****************\n") ;
-
   printf("Nous allons créer une vCard\n")        ;
   printf("Tu vas écrire les informations\n")     ;
   printf("Je vais les réunir dans un fichier\n") ;
