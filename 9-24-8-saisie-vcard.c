@@ -19,7 +19,7 @@ main()
   prenom[i+1] = '\0'                             ;
   i = 0                                          ;
   printf("Écris son nom : ")                     ;
-  while((c=getchar()) != '\0')
+  while((c=getchar()) != '\n')
   {
     nom[i] = c                                   ;
     i++;
@@ -27,7 +27,7 @@ main()
   nom[i+1] = '\0'                                ;
   i = 0                                          ;
   printf("Écris son adresse mél : ")             ;
-  while((c=getchar()) != '\0')
+  while((c=getchar()) != '\n')
   {
     mel[i] = c                                   ;
     i++                                          ;
@@ -35,7 +35,7 @@ main()
   mel[i+1] = '\0'                                ;
   i = 0                                          ;
   printf("Écris son numéro de téléphone (je mets le +, tu mets le code pays, et pas d'espaces) : ") ;
-  while((c = getchar()) != '\0')
+  while((c = getchar()) != '\n')
   {
     tel[i] = c                                   ;
     i++                                          ;
