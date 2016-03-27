@@ -45,7 +45,7 @@ main()
   }
   mel[i+1] = '\0'                                ;
   i = 0                                          ;
-  printf("Écris son numéro de téléphone (je mets le +, tu mets le code pays, et pas d'espaces) : ") ;
+  printf("Écris son numéro de téléphone (je mets le +, tu mets le code pays, espaces possibles) : ") ;
   while((c = getchar()) != '\n')
   {
     tel[i] = c                                   ;
