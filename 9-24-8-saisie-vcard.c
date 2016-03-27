@@ -1,10 +1,9 @@
 /*
-
 Da fare:
 
 * BDAY:19840427
 * Caricare una fotografia
-
+* Function
 */
 
 #include <stdio.h>
