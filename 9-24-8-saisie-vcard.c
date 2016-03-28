@@ -1,3 +1,12 @@
+/*
+
+Da fare:
+
+* BDAY:19840427
+* Caricare una fotografia
+
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -68,6 +77,7 @@ main()
   strcat(fichier,prenom)                         ;
   strcat(fichier,".vcf")                         ;
   vcard = fopen(fichier, "w")                    ;
+
   fprintf(vcard, "BEGIN:VCARD\nVERSION:3.0\nN:%s;%s;;;\nFN:%s %s\nORG:\nROLE:\nEMAIL;type=INTERNET:%s\nTEL;type=VOICE:+%s\nNOTE:%s\nUID:%s\nEND:VCARD", nom, prenom, prenom, nom, mel, tel, note, uid) ;
   fclose(vcard)  ;
   printf("Le fichier %s a bien été créé\n", fichier) ;
