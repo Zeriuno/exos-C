@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void main (int argc, char argv)
+void main (int argc, char *  argv[])
 {
-  printf("Ciao %s", argv);
+  printf("Ciao %s!\n", argv[1]);
 }
