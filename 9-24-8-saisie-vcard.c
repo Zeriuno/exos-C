@@ -1,20 +1,21 @@
 /*
-
 Da fare:
 
 * BDAY:19840427
 * Caricare una fotografia
-
+* Function
 */
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+
 main()
 {
   char c, prenom[100], nom[100], mel[100]        ;
-  char fichier[204], note[100], tel[20]          ;
+  char fichier[204], note[100], tel[20], uid[30] ;
   int i=0                                        ;
-  FILE *vcard                                    ;
+  FILE *vcard, *f1                               ;
 
   printf("Nous allons créer une vCard\n")        ;
   printf("Tu vas écrire les informations\n")     ;
@@ -44,7 +45,7 @@ main()
   }
   mel[i+1] = '\0'                                ;
   i = 0                                          ;
-  printf("Écris son numéro de téléphone (je mets le +, tu mets le code pays, et pas d'espaces) : ") ;
+  printf("Écris son numéro de téléphone (je mets le +, tu mets le code pays, espaces possibles) : ") ;
   while((c = getchar()) != '\n')
   {
     tel[i] = c                                   ;
@@ -60,11 +61,23 @@ main()
   }
   note[i+1] = '\0'                               ;
 
+  f1 = popen("uuidgen", "r")                     ;
+  if(f1 == NULL)
+  {
+    printf("Pas de UUID, erreur de popen\n")     ;
+  }
+  else
+  {
+    fscanf(f1, "%s", uid)                        ;
+    pclose(f1)                                   ;
+  }
+
   strcat(fichier,nom)                            ;
   strcat(fichier,prenom)                         ;
   strcat(fichier,".vcf")                         ;
   vcard = fopen(fichier, "w")                    ;
-  fprintf(vcard, "BEGIN:VCARD\nVERSION:3.0\nN:%s;%s;;;\nFN:%s %s\nORG:\nROLE:\nEMAIL;type=INTERNET:%s\nTEL;type=VOICE:+%s\nNOTE:%s\nEND:VCARD", nom, prenom, prenom, nom, mel, tel, note) ;
+
+  fprintf(vcard, "BEGIN:VCARD\nVERSION:3.0\nN:%s;%s;;;\nFN:%s %s\nORG:\nROLE:\nEMAIL;type=INTERNET:%s\nTEL;type=VOICE:+%s\nNOTE:%s\nUID:%s\nEND:VCARD", nom, prenom, prenom, nom, mel, tel, note, uid) ;
   fclose(vcard)  ;
   printf("Le fichier %s a bien été créé\n", fichier) ;
 }
