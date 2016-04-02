@@ -1,7 +1,7 @@
 /*
 Da fare:
 
-* BDAY:19840427
+* BDAY:19840427 -> en cours, à améliorer
 * Caricare una fotografia
 * Function
 */
