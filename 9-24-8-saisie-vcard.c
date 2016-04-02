@@ -37,6 +37,10 @@ main()
   }
   nom[i+1] = '\0'                                ;
   i = 0                                          ;
+
+  printf("Date d'anniversaire (format aaaammjj): ");
+  scanf("%lu");/*à améliorer*/
+
   printf("Écris son adresse mél : ")             ;
   while((c=getchar()) != '\n')
   {
@@ -77,7 +81,7 @@ main()
   strcat(fichier,".vcf")                         ;
   vcard = fopen(fichier, "w")                    ;
 
-  fprintf(vcard, "BEGIN:VCARD\nVERSION:3.0\nN:%s;%s;;;\nFN:%s %s\nORG:\nROLE:\nEMAIL;type=INTERNET:%s\nTEL;type=VOICE:+%s\nNOTE:%s\nUID:%s\nEND:VCARD", nom, prenom, prenom, nom, mel, tel, note, uid) ;
+  fprintf(vcard, "BEGIN:VCARD\nVERSION:3.0\nN:%s;%s;;;\nFN:%s %s\nORG:\nROLE:\nBDAY:%lu\nEMAIL;type=INTERNET:%s\nTEL;type=VOICE:+%s\nNOTE:%s\nUID:%s\nEND:VCARD", nom, prenom, prenom, nom, mel, tel, note, uid) ;
   fclose(vcard)  ;
   printf("Le fichier %s a bien été créé\n", fichier) ;
 }
